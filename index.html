@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ArkSphere</title>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3GGWBPZK43"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-3GGWBPZK43');
+    </script>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!--head-tags-->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- PrismJS for Code Highlighting (Tomorrow Night Theme) -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-yaml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-jsx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-tsx.min.js"></script>
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              google: {
+                blue: "#1A73E8",
+                green: "#0F9D58",
+                red: "#EA4335",
+                yellow: "#FBBC04",
+                dark: "#202124",
+                gray: "#F7F9FA",
+                border: "#DADCE0",
+              },
+              arks: {
+                dark: "#0D0D0D",
+                light: "#F7F9FA",
+                accent: "#1A73E8",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "-apple-system", "sans-serif"],
+              mono: ["Fira Code", "Menlo", "monospace"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.8s ease-out forwards",
+              "slide-up": "slideUp 0.5s ease-out forwards",
+              "pulse-slow": "pulse 3s infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { opacity: "0", transform: "translateY(20px)" },
+                "100%": { opacity: "1", transform: "translateY(0)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Smooth scrolling for the whole page */
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px; /* Offset for sticky header */
+      }
+      body {
+        background-color: #f7f9fa;
+        color: #202124;
+        transition: background-color 0.3s, color 0.3s;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c1c1c1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #4b5563;
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #6b7280;
+      }
+
+      /* Code block styling tweaks */
+      pre[class*="language-"] {
+        margin: 0 !important;
+        border-radius: 0.5rem;
+        background: #1e1e1e !important;
+      }
+      code[class*="language-"] {
+        font-family: "Fira Code", monospace !important;
+        font-size: 0.875rem !important;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "react/": "https://aistudiocdn.com/react@^18.2.0/",
+          "react": "https://aistudiocdn.com/react@^18.2.0",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^18.2.0/",
+          "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+          "gsap": "https://esm.sh/gsap@3.12.5",
+          "gsap/ScrollTrigger": "https://esm.sh/gsap@3.12.5/ScrollTrigger",
+          "gsap/": "https://aistudiocdn.com/gsap@^3.13.0/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"><!--app-html--></div>
+    <script type="module" src="/src/entry-client.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+---
+title: memU
+description: >-
+  memU is an open-source memory framework for AI companions, offering high
+  accuracy, fast retrieval, and low cost for personalized AI experiences.
+date: 2025-09-04T09:46:26.381Z
+website: 'https://memu.pro'
+github: 'https://github.com/NevaMind-AI/memU'
+oss_date: 2025-07-29T01:54:40.000Z
+author: NevaMind-AI
+tags: []
+featured: false
+thumbnail: 'https://opengraph.githubassets.com/1/NevaMind-AI/memU'
+category: Agent
+---
+
+## Introduction
+
+memU is an open-source memory framework designed for AI companions, featuring high accuracy, fast retrieval, and low cost. It supports multiple retrieval strategies and helps AI companions truly "remember" users.
+
+## Key Features
+
+- 92% accuracy on Locomo benchmark
+- Up to 90% cost reduction
+- Advanced retrieval: semantic, hybrid, contextual
+- 24/7 enterprise support
+
+## Use Cases
+
+- Building personalized AI companions
+- Intelligent memory and user profiling
+- Long-term interaction and growth AI
+- Enterprise AI companion services
+
+## Technical Highlights
+
+- Optimized online platform for efficiency and cost
+- Multiple retrieval and memory strategies
+- Highly adaptable for various AI companion scenarios
+- Open-source architecture, easy integration and extension

@@ -1,0 +1,41 @@
+---
+title: PyTorch
+description: >-
+  An open-source deep learning framework for fast, flexible research and
+  production, featuring dynamic computation graphs and strong GPU acceleration.
+date: 2025-09-15T17:48:42.805Z
+website: 'https://pytorch.org/'
+github: 'https://github.com/pytorch/pytorch'
+oss_date: 2016-08-13T05:26:41.000Z
+author: PyTorch Team & Community
+tags: []
+featured: false
+thumbnail: 'https://opengraph.githubassets.com/1/pytorch/pytorch'
+category: AI Infra
+---
+
+## Introduction
+
+PyTorch is a leading open-source deep learning framework, widely used for research and production. It provides dynamic computation graphs, strong GPU acceleration, and seamless integration with Python and scientific libraries. PyTorch supports flexible model development and efficient deployment across diverse hardware platforms.
+
+## Key Features
+
+- Dynamic computation graphs for flexible model building and debugging.
+- High-performance tensor operations with GPU/CPU support.
+- Tape-based autograd system for automatic differentiation.
+- Extensive ecosystem: TorchScript, DataLoader, distributed training, and more.
+- Rich community resources, tutorials, and model zoo.
+
+## Use Cases
+
+- Academic research in deep learning and AI.
+- Industrial deployment of neural networks for vision, NLP, and more.
+- Rapid prototyping and debugging of new model architectures.
+- Large-scale distributed training and inference.
+
+## Technical Highlights
+
+- Python-first design, deeply integrated with NumPy/SciPy.
+- Efficient memory management and custom GPU allocators.
+- Support for CUDA, ROCm, Intel GPU, and cross-platform builds.
+- TorchScript for model serialization and optimization.

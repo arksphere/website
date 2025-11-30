@@ -1,0 +1,32 @@
+---
+title: pgvector
+description: >-
+  pgvector is an open-source PostgreSQL extension that adds vector data types
+  and similarity search, supporting exact and approximate search (HNSW, IVFFlat)
+  inside Postgres.
+date: 2025-10-06T10:31:39.771Z
+oss_date: 2021-01-15T00:00:00.000Z
+website: 'https://pgvector.org'
+github: 'https://github.com/pgvector/pgvector'
+author: pgvector
+tags:
+  - rag
+featured: false
+thumbnail: 'https://opengraph.githubassets.com/1/pgvector/pgvector'
+category: RAG
+---
+
+## Overview
+
+pgvector lets you store and query vectors directly in PostgreSQL. It supports multiple distance metrics and indexing strategies, enabling hybrid queries with SQL, transactions, and filtering alongside vector similarity search.
+
+## Key features
+
+- Native Postgres vector type and operators.
+- HNSW and IVFFlat index support for approximate search.
+- Broad client support across languages and easy deployment options.
+
+## Use cases
+
+- RAG systems that benefit from SQL joins and strong consistency.
+- Applications that require filtering and transactional guarantees with vector search.

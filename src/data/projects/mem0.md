@@ -1,0 +1,35 @@
+---
+title: Mem0
+description: Mem0 is a scalable memory layer for AI agents that provides long-term, personalized, and efficient memory storage and retrieval.
+date: 2025-11-28T02:24:34.856Z
+website: https://mem0.ai/
+github: https://github.com/mem0ai/mem0
+oss_date: 2023-06-20T08:58:36.000Z
+author: Mem0
+tags:
+  - rag
+featured: false
+thumbnail: https://opengraph.githubassets.com/1/mem0ai/mem0
+slug: mem0
+category: RAG
+---
+
+## Overview
+
+Mem0 ("mem-zero") is a memory layer designed for AI assistants and agents. It enables hierarchical memory management and efficient retrieval to support personalized, long-term interactions.
+
+## Key features
+
+- Multi-level memory: supports user-, session-, and agent-level memories with adaptive personalization.
+- Cost-efficient long-term memory: reduces context cost using retrieval and summarization strategies to lower token consumption and latency.
+- Developer-friendly: cross-platform SDKs (Python/TypeScript), hosted and self-hosted options, and integrations with common vector backends.
+
+## Use cases
+
+- Personalized chat assistants that retain user preferences and long-term context.
+- Customer support systems that recall historical tickets and user interactions.
+- Multi-modal agents that require persistent state across long-running tasks.
+
+## Technical notes
+
+- Supports multiple vector stores and flexible retrieval/indexing strategies; offers managed platform features and an open-source SDK with demos and documentation (OpenMemory integration).
