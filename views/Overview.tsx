@@ -646,18 +646,12 @@ export const Overview: React.FC<OverviewProps> = ({ onChangeView, theme }) => {
               Curated projects mapped to runtime, infra, orchestration,
               retrieval, and ops roles.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <div className="pt-2">
               <button
                 onClick={() => navigate("/osshub")}
                 className="px-5 md:px-6 py-2.5 md:py-3 bg-blue-600 text-white text-sm md:text-base rounded-full font-semibold hover:bg-blue-700 transition-colors shadow"
               >
                 Explore the OSS Hub
-              </button>
-              <button
-                onClick={() => navigate("/docs")}
-                className="px-5 md:px-6 py-2.5 md:py-3 bg-gray-100 dark:bg-[#0d0d0d] text-gray-900 dark:text-white text-sm md:text-base rounded-full font-medium border border-gray-200 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-white/10 transition-colors"
-              >
-                Read the design docs
               </button>
             </div>
           </div>
