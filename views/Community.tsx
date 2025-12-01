@@ -22,7 +22,7 @@ export const Community: React.FC = () => {
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Building the{" "}
             <span className="font-semibold text-gray-900 dark:text-white">
-              AI Agent Runtime
+              AI Agentic Runtime
             </span>
             ,{" "}
             <span className="font-semibold text-gray-900 dark:text-white">

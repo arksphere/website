@@ -21,7 +21,7 @@ export const OssHubIndex: React.FC = () => {
 
   const getCategoryDescription = (category: string): string => {
     const descriptions: Record<string, string> = {
-      "Agent Runtimes & Frameworks":
+      "Agentic Runtimes & Frameworks":
         "Execution and workflow engines for agents as processes. Contracts, state, and orchestration around the runtime.",
       "AI Native Infra & Serving":
         "Inference engines, GPU optimization, serving gateways, and distributed compute that power the runtime layer.",
@@ -37,7 +37,7 @@ export const OssHubIndex: React.FC = () => {
 
   const getCategoryColor = (category: string): string => {
     const colors: Record<string, string> = {
-      "Agent Runtimes & Frameworks": "blue",
+      "Agentic Runtimes & Frameworks": "blue",
       "AI Native Infra & Serving": "indigo",
       "Orchestration & Scheduling": "orange",
       "RAG & Retrieval": "purple",
@@ -124,7 +124,7 @@ export const OssHubIndex: React.FC = () => {
 
     // Sort categories by a predefined order, then by project count
     const categoryOrder = [
-      "Agent Runtimes & Frameworks",
+      "Agentic Runtimes & Frameworks",
       "AI Native Infra & Serving",
       "Orchestration & Scheduling",
       "RAG & Retrieval",
@@ -181,7 +181,7 @@ export const OssHubIndex: React.FC = () => {
         <title>OSS Hub - ArkSphere Open Source Projects</title>
         <meta
           name="description"
-          content="Curated open-source projects around Agent Runtime, AI Native Infra, and the surrounding ecosystem."
+          content="Curated open-source projects around Agentic Runtime, AI Native Infra, and the surrounding ecosystem."
         />
       </Helmet>
 
@@ -194,7 +194,7 @@ export const OssHubIndex: React.FC = () => {
           AI OSS Hub
         </h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-          Curated open-source projects around Agent Runtime, AI Native Infra,
+          Curated open-source projects around Agentic Runtime, AI Native Infra,
           and the surrounding ecosystem.
         </p>
 

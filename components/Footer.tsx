@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
             ArkSphere
           </span>
           <p className="mt-4 text-sm text-gray-500 dark:text-gray-400 max-w-xs">
-            Agent Runtime + AI Native Infra + OSS Hub, built openly with the
+            Agentic Runtime + AI Native Infra + OSS Hub, built openly with the
             community.
           </p>
         </div>
@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
                 className="text-base text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white flex items-center gap-2"
               >
                 <FontAwesomeIcon icon={faRocket} className="w-4 h-4" />
-                Agent Runtime
+                Agentic Runtime
               </a>
             </li>
             <li>

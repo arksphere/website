@@ -48,7 +48,7 @@ export interface Project {
 }
 
 export type ProjectCategory =
-  | 'Agent Runtimes & Frameworks'
+  | 'Agentic Runtimes & Frameworks'
   | 'AI Native Infra & Serving'
   | 'Orchestration & Scheduling'
   | 'RAG & Retrieval'

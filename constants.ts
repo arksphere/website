@@ -2,7 +2,7 @@ import { View, NavItem, OssProject } from './types';
 
 export const NAV_LABELS: Record<string, string> = {
   Overview: 'Overview',
-  AgentRuntime: 'Agent Runtime',
+  AgentRuntime: 'Agentic Runtime',
   AiInfra: 'AI Native Infra',
   OssHub: 'AI OSS Hub',
   Community: 'Community'
@@ -19,7 +19,7 @@ export const NAV_ITEMS: NavItem[] = [
 export const OSS_PROJECTS: OssProject[] = [
   {
     name: "vLLM",
-    description: "High-throughput inference that powers the execution layer of the Agent Runtime.",
+    description: "High-throughput inference that powers the execution layer of the Agentic Runtime.",
     tags: ["Inference", "Serving", "CUDA"],
     stars: "28k+",
     url: "https://github.com/vllm-project/vllm",
@@ -32,7 +32,7 @@ export const OSS_PROJECTS: OssProject[] = [
     tags: ["Agent", "Workflow"],
     stars: "5k+",
     url: "https://github.com/langchain-ai/langgraph",
-    category: "Agent Runtimes & Frameworks",
+    category: "Agentic Runtimes & Frameworks",
     roleInStack: "Runtime -> Workflows"
   },
   {
@@ -64,11 +64,11 @@ export const OSS_PROJECTS: OssProject[] = [
   },
   {
     name: "Dify",
-    description: "LLM application builder that can target the Agent Runtime for execution.",
+    description: "LLM application builder that can target the Agentic Runtime for execution.",
     tags: ["Platform", "Agent"],
     stars: "40k+",
     url: "https://github.com/langgenius/dify",
-    category: "Agent Runtimes & Frameworks",
+    category: "Agentic Runtimes & Frameworks",
     roleInStack: "Hub -> Application Layer"
   },
   {
@@ -103,8 +103,8 @@ export const OSS_PROJECTS: OssProject[] = [
 
 
 export const SYSTEM_INFO = `
-ArkSphere is an Agent Runtime plus the AI Native Infra that powers it, with an OSS Hub that catalogs the ecosystem.
-- Agent Runtime: execution, scheduling, state, and observability for agents as engineering entities.
+ArkSphere is an Agentic Runtime plus the AI Native Infra that powers it, with an OSS Hub that catalogs the ecosystem.
+- Agentic Runtime: execution, scheduling, state, and observability for agents as engineering entities.
 - AI Native Infra: GPU serving, orchestration, distributed systems (vLLM, TensorRT-LLM, Ray, KServe, Kubernetes).
 - OSS Hub: curated projects with their position in the runtime and infra stack.
 `;

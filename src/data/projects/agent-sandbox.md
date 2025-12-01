@@ -6,13 +6,13 @@ description: >-
   workloads securely and at scale.
 date: 2025-11-12T14:17:18.192Z
 oss_date: 2025-08-12T04:55:05.000Z
-website: 'https://agent-sandbox.sigs.k8s.io'
-github: 'https://github.com/kubernetes-sigs/agent-sandbox'
+website: "https://agent-sandbox.sigs.k8s.io"
+github: "https://github.com/kubernetes-sigs/agent-sandbox"
 author: Kubernetes SIGs
 tags:
   - orchestration
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/kubernetes-sigs/agent-sandbox'
+thumbnail: "https://opengraph.githubassets.com/1/kubernetes-sigs/agent-sandbox"
 slug: agent-sandbox
 category: Agent
 ---
@@ -30,7 +30,7 @@ Agent Sandbox is an experimental project initiated by the Kubernetes Special Int
 
 ## Use Cases
 
-- Agent runtime testing: validate agent runtime behavior and resource usage in real cluster environments.
+- Agentic Runtime testing: validate agent runtime behavior and resource usage in real cluster environments.
 - Multi-agent orchestration: evaluate coordination and fault-tolerance strategies for distributed multi-agent systems.
 - Security and compliance evaluation: test agent access patterns and security policies in an isolated environment.
 

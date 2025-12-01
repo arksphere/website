@@ -1,18 +1,18 @@
 ---
 title: AWorld
 description: >-
-  AWorld is an agent runtime and research platform designed for large-scale
+  AWorld is an agentic runtime and research platform designed for large-scale
   multi-agent self-improvement and training.
 date: 2025-10-14T03:38:03.185Z
 oss_date: 2025-03-14T08:30:52.000Z
-website: 'https://inclusionai.github.io/AWorld/'
-github: 'https://github.com/inclusionAI/AWorld'
+website: "https://inclusionai.github.io/AWorld/"
+github: "https://github.com/inclusionAI/AWorld"
 author: inclusionAI
 tags:
   - agent-framework
   - training
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/inclusionAI/AWorld'
+thumbnail: "https://opengraph.githubassets.com/1/inclusionAI/AWorld"
 category: Training
 ---
 

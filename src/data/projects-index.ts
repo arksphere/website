@@ -11,14 +11,14 @@ const projectModules = import.meta.glob('./projects/*.md', { eager: true });
 const mapToPrimaryCategory = (category?: string, tags: string[] = []): string => {
   const normalized = (category || '').toLowerCase();
 
-  if (normalized.includes('agent')) return 'Agent Runtimes & Frameworks';
+  if (normalized.includes('agent')) return 'Agentic Runtimes & Frameworks';
   if (normalized.includes('workflow') || normalized.includes('orchestration')) return 'Orchestration & Scheduling';
   if (normalized.includes('rag')) return 'RAG & Retrieval';
   if (normalized.includes('infer') || normalized.includes('training') || normalized.includes('ai infra')) return 'AI Native Infra & Serving';
   if (normalized.includes('observability') || normalized.includes('ops') || normalized.includes('monitor')) return 'Observability & Ops';
 
   if (tags.some((t) => t.toLowerCase().includes('rag'))) return 'RAG & Retrieval';
-  if (tags.some((t) => t.toLowerCase().includes('agent'))) return 'Agent Runtimes & Frameworks';
+  if (tags.some((t) => t.toLowerCase().includes('agent'))) return 'Agentic Runtimes & Frameworks';
   if (tags.some((t) => t.toLowerCase().includes('gpu') || t.toLowerCase().includes('k8s'))) return 'AI Native Infra & Serving';
 
   return 'Observability & Ops';
@@ -26,7 +26,7 @@ const mapToPrimaryCategory = (category?: string, tags: string[] = []): string =>
 
 const mapRoleInStack = (primaryCategory: string): string => {
   switch (primaryCategory) {
-    case 'Agent Runtimes & Frameworks':
+    case 'Agentic Runtimes & Frameworks':
       return 'Runtime -> Workflows';
     case 'AI Native Infra & Serving':
       return 'Infra -> Serving/Compute';

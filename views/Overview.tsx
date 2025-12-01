@@ -16,10 +16,10 @@ interface OverviewProps {
 }
 
 const TEXT = {
-  label: "AGENT RUNTIME · ARKSPHERE",
+  label: "AGENTIC RUNTIME · ARKSPHERE",
   heroTitle: "Build AI Systems Together",
   subtitle: "A system we develop, verify, and evolve collectively.",
-  ctaStart: "Explore Agent Runtime",
+  ctaStart: "Explore Agentic Runtime",
   ctaArch: "Explore OSS Hub",
   stackSummary: "Runtime · Infra · OSS hub.",
   hubSummary: "Runtime, infra, and OSS mapped into one concise catalog.",
@@ -390,7 +390,7 @@ const storySteps = [
 
 const stackLayers = [
   {
-    title: "Agent Runtime",
+    title: "Agentic Runtime",
     desc: "Execute agents, built openly by the community",
     ctaText: "Explore runtime",
     link: "/architecture",
@@ -412,7 +412,7 @@ const stackLayers = [
 const stackCards = [
   {
     tag: "RT",
-    title: "Agent Runtime",
+    title: "Agentic Runtime",
     role: "Execution + Scheduling",
     desc: "Run and schedule agents.",
   },
@@ -455,10 +455,10 @@ export const Overview: React.FC<OverviewProps> = ({ onChangeView, theme }) => {
   return (
     <div className="bg-white dark:bg-[#050505] text-gray-900 dark:text-white w-full overflow-x-hidden font-sans transition-colors duration-500">
       <Helmet>
-        <title>ArkSphere - Agent Runtime and AI Native Infra</title>
+        <title>ArkSphere - Agentic Runtime and AI Native Infra</title>
         <meta
           name="description"
-          content="Run AI agents as engineering entities. Agent Runtime with scheduling and observability, powered by AI Native Infra and connected to the OSS Hub."
+          content="Run AI agents as engineering entities. Agentic Runtime with scheduling and observability, powered by AI Native Infra and connected to the OSS Hub."
         />
       </Helmet>
 
@@ -527,11 +527,11 @@ export const Overview: React.FC<OverviewProps> = ({ onChangeView, theme }) => {
         </div>
       </section>
 
-      {/* Section 3: Agent Runtime scroll story */}
+      {/* Section 3: Agentic Runtime scroll story */}
       <section className="relative z-10 pt-12 md:pt-28 pb-12 md:pb-24 px-4 md:px-8 max-w-6xl mx-auto space-y-6 md:space-y-10">
         <div className="space-y-3">
           <p className="text-xs uppercase tracking-[0.3em] text-blue-500 font-medium">
-            Agent Runtime, step by step
+            Agentic Runtime, step by step
           </p>
         </div>
         <div className="space-y-6">
@@ -634,7 +634,7 @@ export const Overview: React.FC<OverviewProps> = ({ onChangeView, theme }) => {
         <div className="flex flex-col md:flex-row gap-8 md:gap-10">
           <div className="flex-1 space-y-3 md:space-y-4">
             <p className="text-xs uppercase tracking-[0.3em] text-blue-500 font-medium">
-              Agent Runtime + Infra + OSS Hub
+              Agentic Runtime + Infra + OSS Hub
             </p>
             <h2 className="text-2xl md:text-4xl font-semibold text-gray-900 dark:text-white">
               AI OSS Hub

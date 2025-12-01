@@ -9,7 +9,7 @@ export const CategoryView: React.FC = () => {
 
   const getCategoryDescription = (category: string): string => {
     const descriptions: Record<string, string> = {
-      "Agent Runtimes & Frameworks":
+      "Agentic Runtimes & Frameworks":
         "Execution and workflow engines for agents as processes. Contracts, state, and orchestration around the runtime.",
       "AI Native Infra & Serving":
         "Inference engines, GPU optimization, serving gateways, and distributed compute that power the runtime layer.",
@@ -25,7 +25,7 @@ export const CategoryView: React.FC = () => {
 
   const getCategoryColor = (category: string): string => {
     const colors: Record<string, string> = {
-      "Agent Runtimes & Frameworks": "blue",
+      "Agentic Runtimes & Frameworks": "blue",
       "AI Native Infra & Serving": "indigo",
       "Orchestration & Scheduling": "orange",
       "RAG & Retrieval": "purple",
@@ -53,7 +53,9 @@ export const CategoryView: React.FC = () => {
   // Filter projects by category
   const filteredProjects = useMemo(() => {
     if (!categoryName) return [];
-    return allProjects.filter((project) => project.primaryCategory === categoryName);
+    return allProjects.filter(
+      (project) => project.primaryCategory === categoryName
+    );
   }, [allProjects, categoryName]);
 
   const categoryColor = getCategoryColor(categoryName || "");
@@ -83,7 +85,7 @@ export const CategoryView: React.FC = () => {
         <title>{categoryName} Projects - ArkSphere OSS Hub</title>
         <meta
           name="description"
-          content={`Explore ${filteredProjects.length} ${categoryName} projects in ArkSphere's curated collection. Positioned within the Agent Runtime, AI Native Infra, and OSS Hub stack. ${categoryDescription}`}
+          content={`Explore ${filteredProjects.length} ${categoryName} projects in ArkSphere's curated collection. Positioned within the Agentic Runtime, AI Native Infra, and OSS Hub stack. ${categoryDescription}`}
         />
       </Helmet>
 
@@ -142,7 +144,10 @@ export const CategoryView: React.FC = () => {
               </p>
               {project.positionInStack && (
                 <p className="text-[11px] text-gray-500 dark:text-gray-400 mb-3">
-                  Position in ArkSphere Stack: <span className="font-semibold text-gray-700 dark:text-gray-200">{project.positionInStack}</span>
+                  Position in ArkSphere Stack:{" "}
+                  <span className="font-semibold text-gray-700 dark:text-gray-200">
+                    {project.positionInStack}
+                  </span>
                 </p>
               )}
               <div className="flex flex-wrap gap-2">
