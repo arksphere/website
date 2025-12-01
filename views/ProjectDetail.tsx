@@ -428,21 +428,39 @@ export const ProjectDetail: React.FC = () => {
         <aside className="space-y-6">
           <div className="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#0f1115] overflow-hidden shadow-sm">
             {frontmatter?.thumbnail || project.thumbnail ? (
-              <img
-                src={frontmatter?.thumbnail || project.thumbnail}
-                alt={`${project.title} thumbnail`}
-                className="w-full h-48 object-cover border-b border-gray-200 dark:border-gray-800"
-                onError={(e) => {
+              project.github ? (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Open In Github"
+                >
+                  <img
+                    src={frontmatter?.thumbnail || project.thumbnail}
+                    alt={`${project.title} thumbnail`}
+                    className="w-full h-48 object-cover border-b border-gray-200 dark:border-gray-800"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = "none";
+                    }}
+                  />
+                </a>
+              ) : (
+                <img
+                  src={frontmatter?.thumbnail || project.thumbnail}
+                  alt={`${project.title} thumbnail`}
+                  className="w-full h-48 object-cover border-b border-gray-200 dark:border-gray-800"
+                  onError={(e) => {
                   // Hide broken images
-                  (e.target as HTMLImageElement).style.display = "none";
-                }}
-              />
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
+              )
             ) : (
               <div className="w-full h-48 bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600 border-b border-gray-200 dark:border-gray-800 flex items-center justify-center text-gray-200">
                 No thumbnail
               </div>
             )}
-            <div className="p-5 space-y-4">
+          <div className="p-5 space-y-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300">
                   Project Health
