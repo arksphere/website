@@ -234,7 +234,7 @@ export const ProjectDetail: React.FC = () => {
       </Helmet>
 
       {/* Breadcrumb */}
-      <nav className="mb-8 text-sm">
+      <nav className="mb-8 text-sm pt-4">
         <Link
           to="/osshub"
           className="text-blue-600 dark:text-blue-400 hover:underline"
