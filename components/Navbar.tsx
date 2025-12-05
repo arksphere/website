@@ -320,19 +320,73 @@ export const Navbar: React.FC<NavbarProps> = ({
       {isMenuOpen && (
         <div className="md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-[#0D0D0D]">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.label}
-                to={getPath(item.view)}
-                className={`block px-3 py-2 rounded-md text-base font-medium ${
-                  isActive(item.view)
-                    ? "text-google-blue bg-blue-50 dark:bg-blue-900/20"
-                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
-                }`}
-              >
-                {NAV_LABELS[item.label]}
-              </Link>
-            ))}
+            {NAV_ITEMS.map((item) => {
+              if (item.view === View.AGENT_RUNTIME) {
+                return (
+                  <div key={item.label} className="space-y-1">
+                    <div className="px-3 py-2 text-base font-medium text-gray-900 dark:text-white">
+                      {NAV_LABELS[item.label]}
+                    </div>
+                    <div className="pl-6 space-y-1 border-l-2 border-gray-100 dark:border-gray-800 ml-3">
+                      <Link
+                        to="/architecture"
+                        className="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                      >
+                        Overview
+                      </Link>
+                      <Link
+                        to="/architecture/capabilities"
+                        className="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                      >
+                        Capabilities
+                      </Link>
+                      <Link
+                        to="/specs/agentic-runtime-spec"
+                        className="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                      >
+                        Spec
+                      </Link>
+                    </div>
+                  </div>
+                );
+              }
+              if (item.view === View.AI_INFRA) {
+                return (
+                  <div key={item.label} className="space-y-1">
+                    <div className="px-3 py-2 text-base font-medium text-gray-900 dark:text-white">
+                      {NAV_LABELS[item.label]}
+                    </div>
+                    <div className="pl-6 space-y-1 border-l-2 border-gray-100 dark:border-gray-800 ml-3">
+                      <Link
+                        to="/stack"
+                        className="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                      >
+                        Overview
+                      </Link>
+                      <Link
+                        to="/agentops"
+                        className="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                      >
+                        AgentOps
+                      </Link>
+                    </div>
+                  </div>
+                );
+              }
+              return (
+                <Link
+                  key={item.label}
+                  to={getPath(item.view)}
+                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                    isActive(item.view)
+                      ? "text-google-blue bg-blue-50 dark:bg-blue-900/20"
+                      : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                  }`}
+                >
+                  {NAV_LABELS[item.label]}
+                </Link>
+              );
+            })}
             <a
               href="https://github.com/arksphere"
               target="_blank"

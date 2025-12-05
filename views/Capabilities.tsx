@@ -310,11 +310,11 @@ export const Capabilities: React.FC = () => {
         </h2>
         <div className="space-y-4 max-w-3xl mx-auto">
           {/* Runtime Core */}
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {CAPABILITIES.filter((c) => c.layer === "Runtime Core").map((c) => (
               <div
                 key={c.id}
-                className="bg-blue-600 text-white p-3 rounded-lg text-center text-xs font-bold shadow-lg shadow-blue-600/20"
+                className="bg-blue-600 text-white p-3 rounded-lg text-center text-xs font-bold shadow-lg shadow-blue-600/20 flex items-center justify-center min-h-[3rem]"
               >
                 {c.title}
               </div>
@@ -325,13 +325,13 @@ export const Capabilities: React.FC = () => {
             <div className="h-6 w-0.5 bg-gray-300 dark:bg-gray-700"></div>
           </div>
           {/* Enterprise Layer */}
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {CAPABILITIES.filter((c) => c.layer === "Enterprise Layer")
               .slice(0, 4)
               .map((c) => (
                 <div
                   key={c.id}
-                  className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-3 rounded-lg text-center text-xs font-bold text-gray-700 dark:text-gray-200"
+                  className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-3 rounded-lg text-center text-xs font-bold text-gray-700 dark:text-gray-200 flex items-center justify-center min-h-[3rem]"
                 >
                   {c.title}
                 </div>
@@ -341,7 +341,7 @@ export const Capabilities: React.FC = () => {
               .map((c) => (
                 <div
                   key={c.id}
-                  className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-3 rounded-lg text-center text-xs font-bold text-gray-700 dark:text-gray-200"
+                  className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-3 rounded-lg text-center text-xs font-bold text-gray-700 dark:text-gray-200 flex items-center justify-center min-h-[3rem]"
                 >
                   {c.title}
                 </div>
