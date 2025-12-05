@@ -37,6 +37,13 @@ export const Navbar: React.FC<NavbarProps> = ({
       return true;
     if (view === View.COMMUNITY && location.pathname === "/community")
       return true;
+    if (view === View.AGENTOPS && location.pathname === "/agentops")
+      return true;
+    if (
+      view === View.AGENTOPS_ARCHITECT &&
+      location.pathname === "/agentops-architect"
+    )
+      return true;
     return false;
   };
 
@@ -52,6 +59,8 @@ export const Navbar: React.FC<NavbarProps> = ({
         return "/stack";
       case View.COMMUNITY:
         return "/community";
+      case View.AGENTOPS:
+        return "/agentops";
       default:
         return "/";
     }

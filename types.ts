@@ -5,7 +5,8 @@ export enum View {
   AGENT_RUNTIME = 'AgentRuntime',
   AI_INFRA = 'AiInfra',
   OSS_HUB = 'OssHub',
-  COMMUNITY = 'Community'
+  COMMUNITY = 'Community',
+  AGENTOPS = 'AgentOps'
 }
 
 export interface NavItem {

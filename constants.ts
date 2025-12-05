@@ -5,7 +5,8 @@ export const NAV_LABELS: Record<string, string> = {
   AgentRuntime: 'Agentic Runtime',
   AiInfra: 'AI Native Infra',
   OssHub: 'AI OSS Hub',
-  Community: 'Community'
+  Community: 'Community',
+  AgentOpsArchitect: 'AgentOps Architect'
 };
 
 export const NAV_ITEMS: NavItem[] = [

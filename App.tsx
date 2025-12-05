@@ -26,6 +26,11 @@ const Stack = lazy(() =>
 const Community = lazy(() =>
   import("./views/Community").then((m) => ({ default: m.Community }))
 );
+const AgentOps = lazy(() =>
+  import("./views/AgentOps").then((module) => ({
+    default: module.AgentOps,
+  }))
+);
 
 function App() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -45,6 +50,13 @@ function App() {
   }, []);
 
   useEffect(() => {
+    if (location.pathname === "/agentops") {
+      document.documentElement.classList.add("dark");
+      document.body.style.backgroundColor = "#0D0D0D";
+      document.body.style.color = "#F7F9FA";
+      return;
+    }
+
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
       document.body.style.backgroundColor = "#0D0D0D";
@@ -54,7 +66,7 @@ function App() {
       document.body.style.backgroundColor = "#F7F9FA";
       document.body.style.color = "#202124";
     }
-  }, [theme]);
+  }, [theme, location.pathname]);
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
@@ -84,8 +96,12 @@ function App() {
 
   return (
     <div
-      className={`min-h-screen flex flex-col font-sans transition-colors duration-300 ${
-        theme === "dark"
+      className={`flex flex-col font-sans transition-colors duration-300 ${
+        location.pathname === "/agentops"
+          ? "h-screen overflow-hidden"
+          : "min-h-screen"
+      } ${
+        theme === "dark" || location.pathname === "/agentops"
           ? "bg-[#0D0D0D] text-white"
           : "bg-[#F7F9FA] text-gray-900"
       }`}
@@ -98,7 +114,9 @@ function App() {
 
       <main
         className={`flex-grow ${
-          location.pathname === "/" ? "p-0" : "pt-8 px-4 sm:px-6 lg:px-8"
+          location.pathname === "/" || location.pathname === "/agentops"
+            ? "p-0"
+            : "pt-8 px-4 sm:px-6 lg:px-8"
         }`}
       >
         <Suspense
@@ -122,11 +140,12 @@ function App() {
             <Route path="/architecture" element={<Architecture />} />
             <Route path="/stack" element={<Stack />} />
             <Route path="/community" element={<Community />} />
+            <Route path="/agentops" element={<AgentOps />} />
           </Routes>
         </Suspense>
       </main>
 
-      <Footer />
+      {location.pathname !== "/agentops" && <Footer />}
     </div>
   );
 }
