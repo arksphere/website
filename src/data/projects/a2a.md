@@ -1,16 +1,14 @@
 ---
 title: A2A
-description: >-
-  An open protocol enabling communication and interoperability between opaque
-  agent applications.
-date: 2025-07-27T11:02:20.000Z
-website: 'https://a2a-protocol.org/'
+description: An open protocol enabling communication and interoperability between opaque agent applications.
+date: 2025-12-05T11:57:13.573Z
+website: https://a2a-protocol.org/
 author: Google
-github: 'https://github.com/a2aproject/A2A'
+github: https://github.com/a2aproject/A2A
 oss_date: 2025-03-25T18:44:21.000Z
 tags: []
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/a2aproject/A2A'
+thumbnail: https://opengraph.githubassets.com/1/a2aproject/A2A
 slug: a2a
 category: Agent
 ---

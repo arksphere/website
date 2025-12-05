@@ -1,18 +1,16 @@
 ---
 title: AIBrix
-description: >-
-  AIBrix is a cloud-native infrastructure framework for large-scale LLM
-  inference, providing scalable and cost-efficient inference components.
-date: 2025-09-26T16:26:19.379Z
-website: 'https://aibrix.readthedocs.io/latest/'
-github: 'https://github.com/vllm-project/aibrix'
+description: AIBrix is a cloud-native infrastructure framework for large-scale LLM inference, providing scalable and cost-efficient inference components.
+date: 2025-12-05T12:01:11.134Z
+website: https://aibrix.readthedocs.io/latest/
+github: https://github.com/vllm-project/aibrix
 oss_date: 2024-06-10T23:06:10.000Z
 author: vllm-project
 tags:
   - orchestration
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/vllm-project/aibrix'
+thumbnail: https://opengraph.githubassets.com/1/vllm-project/aibrix
 category: Inference
 ---
 

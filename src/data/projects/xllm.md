@@ -1,19 +1,17 @@
 ---
 title: xLLM
-description: >-
-  xLLM is an open-source framework for vision-language models, providing tools
-  and documentation for training and inference.
-date: 2025-11-06T17:52:05.992Z
+description: xLLM is an open-source framework for vision-language models, providing tools and documentation for training and inference.
+date: 2025-12-05T12:04:38.580Z
 oss_date: 2025-08-12T13:16:07.000Z
-website: 'https://xllm.readthedocs.io/zh-cn/latest/'
-github: 'https://github.com/jd-opensource/xllm'
+website: https://xllm.readthedocs.io/zh-cn/latest/
+github: https://github.com/jd-opensource/xllm
 author: jd-opensource
 tags:
   - multimodal
   - training
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/jd-opensource/xllm'
+thumbnail: https://opengraph.githubassets.com/1/jd-opensource/xllm
 category: Inference
 ---
 

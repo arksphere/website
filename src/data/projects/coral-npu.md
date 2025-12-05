@@ -1,7 +1,7 @@
 ---
 title: Coral NPU
 description: Coral NPU is an energy-efficient machine learning accelerator core for edge devices provided by Google Coral.
-date: 2025-11-28T02:18:48.006Z
+date: 2025-12-05T12:02:39.635Z
 oss_date: 2025-10-02T22:32:37.000Z
 website: https://developers.google.com/coral
 github: https://github.com/google-coral/coralnpu

@@ -1,16 +1,14 @@
 ---
 title: OM1
-description: >-
-  OpenMind's modular AI runtime for deploying multimodal agents across digital
-  environments and physical robots
-date: 2025-09-21T00:00:00.000Z
-website: 'https://github.com/OpenMind/OM1'
-github: 'https://github.com/OpenMind/OM1'
+description: OpenMind's modular AI runtime for deploying multimodal agents across digital environments and physical robots
+date: 2025-12-05T12:07:01.890Z
+website: https://github.com/OpenMind/OM1
+github: https://github.com/OpenMind/OM1
 oss_date: 2025-01-08T21:23:40.000Z
 author: OpenMind
 tags: []
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/OpenMind/OM1'
+thumbnail: https://opengraph.githubassets.com/1/OpenMind/OM1
 category: Agent
 ---
 

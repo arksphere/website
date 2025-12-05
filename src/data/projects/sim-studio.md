@@ -1,15 +1,13 @@
 ---
 author: Sim Studio
-date: 2025-07-22T00:00:00.000Z
-description: >-
-  A lightweight and user-friendly AI agent workflow building platform supporting
-  both cloud-hosted and self-hosted deployment options.
+date: 2025-12-05T12:08:06.250Z
+description: A lightweight and user-friendly AI agent workflow building platform supporting both cloud-hosted and self-hosted deployment options.
 featured: false
-github: 'https://github.com/simstudioai/sim'
+github: https://github.com/simstudioai/sim
 oss_date: 2025-01-05T22:47:49.000Z
 tags: []
-thumbnail: 'https://opengraph.githubassets.com/1/simstudioai/sim'
-website: 'https://www.simstudio.ai/'
+thumbnail: https://opengraph.githubassets.com/1/simstudioai/sim
+website: https://www.simstudio.ai/
 title: Sim Studio
 slug: sim-studio
 category: Agent

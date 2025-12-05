@@ -1,17 +1,15 @@
 ---
 title: kagent
-description: >-
-  Kubernetes-native agent framework to declaratively build, run and manage AI
-  agents on Kubernetes.
-date: 2025-09-17T09:14:22.749Z
-website: 'https://kagent.dev/'
-github: 'https://github.com/kagent-dev/kagent'
+description: Kubernetes-native agent framework to declaratively build, run and manage AI agents on Kubernetes.
+date: 2025-12-05T12:03:04.294Z
+website: https://kagent.dev/
+github: https://github.com/kagent-dev/kagent
 oss_date: 2025-01-21T17:03:23.000Z
-demo: ''
+demo: ""
 author: Solo.io
 tags: []
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/kagent-dev/kagent'
+thumbnail: https://opengraph.githubassets.com/1/kagent-dev/kagent
 category: Agent
 ---
 

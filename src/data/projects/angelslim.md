@@ -1,17 +1,15 @@
 ---
 title: AngelSlim
-description: >-
-  AngelSlim is a model compression toolkit from Tencent providing easy-to-use
-  compression and quantization workflows for efficient deployment.
-date: 2025-11-06T17:50:51.322Z
+description: AngelSlim is a model compression toolkit from Tencent providing easy-to-use compression and quantization workflows for efficient deployment.
+date: 2025-12-05T12:01:28.662Z
 oss_date: 2025-07-04T02:10:39.000Z
-website: 'https://angelslim.readthedocs.io'
-github: 'https://github.com/Tencent/AngelSlim'
+website: https://angelslim.readthedocs.io
+github: https://github.com/Tencent/AngelSlim
 author: Tencent
 tags:
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/Tencent/AngelSlim'
+thumbnail: https://opengraph.githubassets.com/1/Tencent/AngelSlim
 category: Inference
 ---
 

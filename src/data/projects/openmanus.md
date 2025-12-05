@@ -1,16 +1,14 @@
 ---
 title: OpenManus
-description: >-
-  OpenManus is a modular open-source agent framework that helps move
-  natural-language driven agent prototypes into deployable engineering systems.
-date: 2025-11-06T12:00:00.000Z
-github: 'https://github.com/FoundationAgents/OpenManus'
+description: OpenManus is a modular open-source agent framework that helps move natural-language driven agent prototypes into deployable engineering systems.
+date: 2025-12-05T12:07:19.700Z
+github: https://github.com/FoundationAgents/OpenManus
 oss_date: 2025-03-06T14:08:14.000Z
 author: Foundation Agents
-website: 'https://openmanus.github.io/'
+website: https://openmanus.github.io/
 tags: []
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/FoundationAgents/OpenManus'
+thumbnail: https://opengraph.githubassets.com/1/FoundationAgents/OpenManus
 slug: openmanus
 category: Agent
 ---

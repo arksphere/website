@@ -1,18 +1,16 @@
 ---
-title: SeekDB
-description: >-
-  An AI-native search database that unifies vector, text, and structured data in
-  a single engine to enable hybrid search and in-database AI workflows.
-date: 2025-11-17T04:10:03.788Z
+title: seekdb
+description: An AI-native search database that unifies vector, text, and structured data in a single engine to enable hybrid search and in-database AI workflows.
+date: 2025-12-05T11:56:48.893Z
 oss_date: 2025-10-21T11:31:11.000Z
-website: 'https://oceanbase.ai/'
-github: 'https://github.com/oceanbase/seekdb'
+website: https://oceanbase.ai/
+github: https://github.com/oceanbase/seekdb
 author: OceanBase
 tags:
   - vector-db
   - rag
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/oceanbase/seekdb'
+thumbnail: https://opengraph.githubassets.com/1/oceanbase/seekdb
 slug: seekdb
 category: RAG
 ---

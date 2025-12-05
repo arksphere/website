@@ -1,7 +1,7 @@
 ---
 title: Swarms
 description: A production-ready multi-agent orchestration framework that provides scalable runtimes and protocols for collaborative agents.
-date: 2025-11-28T02:31:05.359Z
+date: 2025-12-05T12:05:29.744Z
 oss_date: 2023-05-11T01:09:00.000Z
 website: https://swarms.ai
 github: https://github.com/kyegomez/swarms

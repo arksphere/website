@@ -1,7 +1,7 @@
 ---
 title: Agents at Scale - ARK
 description: An open collection of patterns and practices for enterprise-scale agentic applications, codifying engineering and operational guidance.
-date: 2025-12-05T05:10:37.766Z
+date: 2025-12-05T11:58:26.573Z
 oss_date: 2025-08-28T15:48:47Z
 website: https://mckinsey.github.io/agents-at-scale-ark/
 github: https://github.com/mckinsey/agents-at-scale-ark

@@ -1,17 +1,15 @@
 ---
 title: Agent Framework
-description: >-
-  Microsoft's multi-language framework for building, orchestrating, and
-  deploying AI agents and multi-agent workflows.
-date: 2025-10-03T07:28:53.268Z
+description: Microsoft's multi-language framework for building, orchestrating, and deploying AI agents and multi-agent workflows.
+date: 2025-12-05T11:57:39.741Z
 oss_date: 2025-04-28T19:40:42.000Z
-website: 'https://aka.ms/agent-framework'
-github: 'https://github.com/microsoft/agent-framework'
+website: https://aka.ms/agent-framework
+github: https://github.com/microsoft/agent-framework
 author: Microsoft
 tags:
   - agent-framework
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/microsoft/agent-framework'
+thumbnail: https://opengraph.githubassets.com/1/microsoft/agent-framework
 category: Agent
 ---
 

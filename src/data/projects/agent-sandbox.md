@@ -1,18 +1,15 @@
 ---
 title: Agent Sandbox
-description: >-
-  An experimental sandbox project by Kubernetes SIGs aiming to provide a
-  Kubernetes-native environment for running, orchestrating, and managing agent
-  workloads securely and at scale.
-date: 2025-11-12T14:17:18.192Z
+description: An experimental sandbox project by Kubernetes SIGs aiming to provide a Kubernetes-native environment for running, orchestrating, and managing agent workloads securely and at scale.
+date: 2025-12-05T11:58:11.332Z
 oss_date: 2025-08-12T04:55:05.000Z
-website: "https://agent-sandbox.sigs.k8s.io"
-github: "https://github.com/kubernetes-sigs/agent-sandbox"
+website: https://agent-sandbox.sigs.k8s.io
+github: https://github.com/kubernetes-sigs/agent-sandbox
 author: Kubernetes SIGs
 tags:
   - orchestration
 featured: false
-thumbnail: "https://opengraph.githubassets.com/1/kubernetes-sigs/agent-sandbox"
+thumbnail: https://opengraph.githubassets.com/1/kubernetes-sigs/agent-sandbox
 slug: agent-sandbox
 category: Agent
 ---

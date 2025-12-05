@@ -1,16 +1,13 @@
 ---
 title: Sandbox Runtime
-description: >-
-  A lightweight sandboxing tool for enforcing filesystem and network
-  restrictions on arbitrary processes at the OS level, without requiring a
-  container.
-date: 2025-10-21T11:49:32.660Z
+description: A lightweight sandboxing tool for enforcing filesystem and network restrictions on arbitrary processes at the OS level, without requiring a container.
+date: 2025-12-05T12:07:37.883Z
 oss_date: 2025-10-20T02:52:10.000Z
-github: 'https://github.com/anthropic-experimental/sandbox-runtime'
+github: https://github.com/anthropic-experimental/sandbox-runtime
 author: Anthropic
 tags: []
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/anthropic-experimental/sandbox-runtime'
+thumbnail: https://opengraph.githubassets.com/1/anthropic-experimental/sandbox-runtime
 category: AI Infra
 ---
 

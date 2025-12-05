@@ -1,17 +1,15 @@
 ---
 title: AReaL
-description: >-
-  A fully asynchronous reinforcement learning system for large reasoning and
-  agentic models that emphasizes scalability and reproducibility.
-date: 2025-11-15T02:59:58.377Z
+description: A fully asynchronous reinforcement learning system for large reasoning and agentic models that emphasizes scalability and reproducibility.
+date: 2025-12-05T12:06:03.111Z
 oss_date: 2025-02-24T07:23:43.000Z
-website: 'https://inclusionai.github.io/AReaL/'
-github: 'https://github.com/inclusionAI/AReaL'
+website: https://inclusionai.github.io/AReaL/
+github: https://github.com/inclusionAI/AReaL
 author: Ant Group
 tags:
   - training
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/inclusionAI/AReaL'
+thumbnail: https://opengraph.githubassets.com/1/inclusionAI/AReaL
 slug: areal
 category: Training
 ---

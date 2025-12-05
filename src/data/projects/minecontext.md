@@ -1,17 +1,14 @@
 ---
 title: MineContext
-description: >-
-  MineContext is a proactive, context-aware AI partner combining
-  Context-Engineering with ChatGPT Pulse to improve dialogue coherence and
-  retrieval in RAG scenarios.
-date: 2025-10-20T07:55:23.777Z
+description: MineContext is a proactive, context-aware AI partner combining Context-Engineering with ChatGPT Pulse to improve dialogue coherence and retrieval in RAG scenarios.
+date: 2025-12-05T12:03:42.995Z
 oss_date: 2025-06-24T11:15:21.000Z
-github: 'https://github.com/volcengine/MineContext'
+github: https://github.com/volcengine/MineContext
 author: ByteDance
 tags:
   - rag
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/volcengine/MineContext'
+thumbnail: https://opengraph.githubassets.com/1/volcengine/MineContext
 category: RAG
 ---
 

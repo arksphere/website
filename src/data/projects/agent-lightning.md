@@ -1,18 +1,16 @@
 ---
 title: Agent Lightning
-description: >-
-  Agent Lightning is an open-source framework from Microsoft Research for
-  training and improving AI agents with minimal code changes.
-date: 2025-10-28T02:00:39.920Z
+description: Agent Lightning is an open-source framework from Microsoft Research for training and improving AI agents with minimal code changes.
+date: 2025-12-05T11:59:56.058Z
 oss_date: 2025-06-18T07:28:45.000Z
-website: 'https://microsoft.github.io/agent-lightning/'
-github: 'https://github.com/microsoft/agent-lightning'
+website: https://microsoft.github.io/agent-lightning/
+github: https://github.com/microsoft/agent-lightning
 author: Microsoft Research
 tags:
   - agent-framework
   - training
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/microsoft/agent-lightning'
+thumbnail: https://opengraph.githubassets.com/1/microsoft/agent-lightning
 category: Training
 ---
 

@@ -1,18 +1,15 @@
 ---
 title: agentgateway
-description: >-
-  A high-performance proxy data plane for agents, providing security,
-  observability, and governance capabilities for agent-to-agent and
-  agent-to-tool communication.
-date: 2025-09-17T09:14:50.693Z
-website: 'https://agentgateway.dev/'
-github: 'https://github.com/agentgateway/agentgateway'
+description: A high-performance proxy data plane for agents, providing security, observability, and governance capabilities for agent-to-agent and agent-to-tool communication.
+date: 2025-12-05T12:00:34.549Z
+website: https://agentgateway.dev/
+github: https://github.com/agentgateway/agentgateway
 oss_date: 2025-03-18T20:55:22.000Z
-demo: ''
+demo: ""
 author: Solo.io
 tags: []
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/agentgateway/agentgateway'
+thumbnail: https://opengraph.githubassets.com/1/agentgateway/agentgateway
 category: Agent
 ---
 

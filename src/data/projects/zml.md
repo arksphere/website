@@ -1,17 +1,15 @@
 ---
 title: ZML
-description: >-
-  A high-performance inference and compilation stack designed for production
-  deployments across diverse hardware and platforms.
-date: 2025-09-30T00:51:25.230Z
-website: 'https://zml.ai/'
-github: 'https://github.com/zml/zml'
+description: A high-performance inference and compilation stack designed for production deployments across diverse hardware and platforms.
+date: 2025-12-05T12:04:20.429Z
+website: https://zml.ai/
+github: https://github.com/zml/zml
 oss_date: 2024-09-17T09:13:32.000Z
 author: ZML
 tags:
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/zml/zml'
+thumbnail: https://opengraph.githubassets.com/1/zml/zml
 category: Inference
 ---
 
