@@ -105,6 +105,42 @@ export const Architecture: React.FC = () => {
         </p>
       </div>
 
+      {/* Capabilities Info Card */}
+      <div className="w-full bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-2xl border border-blue-100 dark:border-blue-900/30 p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-8">
+        <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-blue-600 text-white flex items-center justify-center shadow-lg shadow-blue-600/20">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polygon points="12 2 2 7 12 12 22 7 12 2" />
+            <polyline points="2 17 12 22 22 17" />
+            <polyline points="2 12 12 17 22 12" />
+          </svg>
+        </div>
+        <div className="flex-1">
+          <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+            Agentic Runtime Capabilities
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl">
+            A unified capability model defining the essential primitives of
+            enterprise-grade agent platforms.
+          </p>
+        </div>
+        <a
+          href="/architecture/capabilities"
+          className="px-5 py-2.5 bg-white dark:bg-blue-600 text-blue-600 dark:text-white font-medium text-sm rounded-lg shadow-sm border border-gray-200 dark:border-blue-500 hover:bg-gray-50 dark:hover:bg-blue-500 transition-colors whitespace-nowrap"
+        >
+          Explore Capabilities
+        </a>
+      </div>
+
       {/* Diagram Section - Full Width */}
       <div className="arch-diagram w-full bg-white dark:bg-[#0a0a0a] rounded-3xl border border-gray-200 dark:border-gray-800 shadow-2xl overflow-hidden">
         <ArksDiagram />

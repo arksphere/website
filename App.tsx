@@ -31,6 +31,14 @@ const AgentOps = lazy(() =>
     default: module.AgentOps,
   }))
 );
+const Capabilities = lazy(() =>
+  import("./views/Capabilities").then((m) => ({ default: m.Capabilities }))
+);
+const AgenticRuntimeSpec = lazy(() =>
+  import("./views/AgenticRuntimeSpec").then((m) => ({
+    default: m.AgenticRuntimeSpec,
+  }))
+);
 
 function App() {
   const [theme, setTheme] = useState<"light" | "dark">("light");
@@ -138,6 +146,14 @@ function App() {
             />
             <Route path="/osshub/:slug" element={<ProjectDetail />} />
             <Route path="/architecture" element={<Architecture />} />
+            <Route
+              path="/architecture/capabilities"
+              element={<Capabilities />}
+            />
+            <Route
+              path="/specs/agentic-runtime-spec"
+              element={<AgenticRuntimeSpec />}
+            />
             <Route path="/stack" element={<Stack />} />
             <Route path="/community" element={<Community />} />
             <Route path="/agentops" element={<AgentOps />} />

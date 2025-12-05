@@ -32,7 +32,8 @@ export const Navbar: React.FC<NavbarProps> = ({
     if (
       view === View.AI_INFRA &&
       (location.pathname === "/stack" ||
-        location.pathname === "/ai-native-infra")
+        location.pathname === "/ai-native-infra" ||
+        location.pathname === "/agentops")
     )
       return true;
     if (view === View.COMMUNITY && location.pathname === "/community")
@@ -86,19 +87,117 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.label}
-                to={getPath(item.view)}
-                className={`px-3 py-2 text-sm font-medium transition-colors ${
-                  isActive(item.view)
-                    ? "text-google-blue"
-                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-                }`}
-              >
-                {NAV_LABELS[item.label]}
-              </Link>
-            ))}
+            {NAV_ITEMS.map((item) => {
+              if (item.view === View.AGENT_RUNTIME) {
+                return (
+                  <div key={item.label} className="relative group">
+                    <Link
+                      to={getPath(item.view)}
+                      className={`px-3 py-2 text-sm font-medium transition-colors inline-flex items-center gap-1 ${
+                        isActive(item.view)
+                          ? "text-google-blue"
+                          : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                      }`}
+                    >
+                      {NAV_LABELS[item.label]}
+                      <svg
+                        className="w-3 h-3 opacity-70 group-hover:opacity-100 transition-transform group-hover:rotate-180"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          d="M1 1l4 4 4-4"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          fill="none"
+                        />
+                      </svg>
+                    </Link>
+                    {/* Dropdown */}
+                    <div className="absolute left-0 mt-0 w-48 bg-white dark:bg-[#0D0D0D] border border-gray-200 dark:border-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50">
+                      <div className="py-1">
+                        <Link
+                          to="/architecture"
+                          className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        >
+                          Overview
+                        </Link>
+                        <Link
+                          to="/architecture/capabilities"
+                          className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        >
+                          Capabilities
+                        </Link>
+                        <Link
+                          to="/specs/agentic-runtime-spec"
+                          className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        >
+                          Spec
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              if (item.view === View.AI_INFRA) {
+                return (
+                  <div key={item.label} className="relative group">
+                    <Link
+                      to={getPath(item.view)}
+                      className={`px-3 py-2 text-sm font-medium transition-colors inline-flex items-center gap-1 ${
+                        isActive(item.view)
+                          ? "text-google-blue"
+                          : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                      }`}
+                    >
+                      {NAV_LABELS[item.label]}
+                      <svg
+                        className="w-3 h-3 opacity-70 group-hover:opacity-100 transition-transform group-hover:rotate-180"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          d="M1 1l4 4 4-4"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          fill="none"
+                        />
+                      </svg>
+                    </Link>
+                    {/* Dropdown */}
+                    <div className="absolute left-0 mt-0 w-48 bg-white dark:bg-[#0D0D0D] border border-gray-200 dark:border-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50">
+                      <div className="py-1">
+                        <Link
+                          to="/stack"
+                          className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        >
+                          Overview
+                        </Link>
+                        <Link
+                          to="/agentops"
+                          className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        >
+                          AgentOps
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={item.label}
+                  to={getPath(item.view)}
+                  className={`px-3 py-2 text-sm font-medium transition-colors ${
+                    isActive(item.view)
+                      ? "text-google-blue"
+                      : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                  }`}
+                >
+                  {NAV_LABELS[item.label]}
+                </Link>
+              );
+            })}
           </div>
 
           <div className="hidden md:flex items-center gap-4">
