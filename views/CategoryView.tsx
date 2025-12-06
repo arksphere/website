@@ -2,37 +2,14 @@ import React, { useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
 import { getAllProjects } from "../src/data/projects-index";
+import { CATEGORIES, getCategoryBySlug } from "../src/data/categories";
 
 export const CategoryView: React.FC = () => {
-  const { categoryName } = useParams<{ categoryName: string }>();
+  const { categorySlug } = useParams<{ categorySlug: string }>();
   const allProjects = useMemo(() => getAllProjects(), []);
 
-  const getCategoryDescription = (category: string): string => {
-    const descriptions: Record<string, string> = {
-      "Agentic Runtimes & Frameworks":
-        "Execution and workflow engines for agents as processes. Contracts, state, and orchestration around the runtime.",
-      "AI Native Infra & Serving":
-        "Inference engines, GPU optimization, serving gateways, and distributed compute that power the runtime layer.",
-      "Orchestration & Scheduling":
-        "Schedulers, queues, and control planes that route agent work with guarantees and priorities.",
-      "RAG & Retrieval":
-        "Retrievers, vector stores, rerankers, and pipelines that feed context into agent workflows.",
-      "Observability & Ops":
-        "Metrics, tracing, evaluation, and interface layers that keep the runtime understandable and debuggable.",
-    };
-    return descriptions[category] || "AI infrastructure and tools";
-  };
-
-  const getCategoryColor = (category: string): string => {
-    const colors: Record<string, string> = {
-      "Agentic Runtimes & Frameworks": "blue",
-      "AI Native Infra & Serving": "indigo",
-      "Orchestration & Scheduling": "orange",
-      "RAG & Retrieval": "purple",
-      "Observability & Ops": "green",
-    };
-    return colors[category] || "gray";
-  };
+  const category = categorySlug ? getCategoryBySlug(categorySlug) : undefined;
+  const categoryName = category ? category.name : undefined;
 
   const getColorClasses = (color: string) => {
     const colorMap: Record<string, string> = {
@@ -58,10 +35,12 @@ export const CategoryView: React.FC = () => {
     );
   }, [allProjects, categoryName]);
 
-  const categoryColor = getCategoryColor(categoryName || "");
-  const categoryDescription = getCategoryDescription(categoryName || "");
+  const categoryColor = category ? category.color : "gray";
+  const categoryDescription = category
+    ? category.description
+    : "AI infrastructure and tools";
 
-  if (!categoryName) {
+  if (!category) {
     return (
       <div className="max-w-7xl mx-auto pb-20">
         <div className="text-center py-20">
@@ -142,14 +121,7 @@ export const CategoryView: React.FC = () => {
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
                 {project.description}
               </p>
-              {project.positionInStack && (
-                <p className="text-[11px] text-gray-500 dark:text-gray-400 mb-3">
-                  Position in ArkSphere Stack:{" "}
-                  <span className="font-semibold text-gray-700 dark:text-gray-200">
-                    {project.positionInStack}
-                  </span>
-                </p>
-              )}
+
               <div className="flex flex-wrap gap-2">
                 {project.tags.slice(0, 3).map((tag) => (
                   <span

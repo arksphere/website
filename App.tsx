@@ -141,7 +141,7 @@ function App() {
             />
             <Route path="/osshub" element={<OssHubIndex />} />
             <Route
-              path="/osshub/category/:categoryName"
+              path="/osshub/category/:categorySlug"
               element={<CategoryView />}
             />
             <Route path="/osshub/:slug" element={<ProjectDetail />} />

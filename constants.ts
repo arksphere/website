@@ -1,7 +1,7 @@
 import { View, NavItem, OssProject } from './types';
 
 export const NAV_LABELS: Record<string, string> = {
-  Overview: 'Overview',
+  Overview: 'Home',
   AgentRuntime: 'Agentic Runtime',
   AiInfra: 'AI Native Infra',
   OssHub: 'AI OSS Hub',

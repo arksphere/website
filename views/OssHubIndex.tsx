@@ -7,10 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
+import { CATEGORIES, getCategoryByName } from "../src/data/categories";
+
 interface CategoryInfo {
   name: string;
   description: string;
   color: string;
+  slug: string; // Added slug
   projects: Project[];
 }
 
@@ -18,33 +21,6 @@ export const OssHubIndex: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const projects = useMemo(() => getAllProjects(), []);
-
-  const getCategoryDescription = (category: string): string => {
-    const descriptions: Record<string, string> = {
-      "Agentic Runtimes & Frameworks":
-        "Execution and workflow engines for agents as processes. Contracts, state, and orchestration around the runtime.",
-      "AI Native Infra & Serving":
-        "Inference engines, GPU optimization, serving gateways, and distributed compute that power the runtime layer.",
-      "Orchestration & Scheduling":
-        "Schedulers, queues, and control planes that route agent work with guarantees and priorities.",
-      "RAG & Retrieval":
-        "Retrievers, vector stores, rerankers, and pipelines that feed context into agent workflows.",
-      "Observability & Ops":
-        "Metrics, tracing, evaluation, and interface layers that keep the runtime understandable and debuggable.",
-    };
-    return descriptions[category] || "AI infrastructure and tools";
-  };
-
-  const getCategoryColor = (category: string): string => {
-    const colors: Record<string, string> = {
-      "Agentic Runtimes & Frameworks": "blue",
-      "AI Native Infra & Serving": "indigo",
-      "Orchestration & Scheduling": "orange",
-      "RAG & Retrieval": "purple",
-      "Observability & Ops": "green",
-    };
-    return colors[category] || "gray";
-  };
 
   const getColorClasses = (color: string) => {
     const colorMap: Record<string, string> = {
@@ -108,31 +84,29 @@ export const OssHubIndex: React.FC = () => {
     const categories: Record<string, CategoryInfo> = {};
 
     projects.forEach((project) => {
-      const category = project.primaryCategory || project.category || "Other";
+      const categoryName =
+        project.primaryCategory || project.category || "Other";
+      const categoryDef = getCategoryByName(categoryName);
 
-      if (!categories[category]) {
-        categories[category] = {
-          name: category,
-          description: getCategoryDescription(category),
-          color: getCategoryColor(category),
+      if (!categories[categoryName]) {
+        categories[categoryName] = {
+          name: categoryName,
+          description: categoryDef
+            ? categoryDef.description
+            : "AI infrastructure and tools",
+          color: categoryDef ? categoryDef.color : "gray",
+          slug: categoryDef ? categoryDef.slug : "other",
           projects: [],
         };
       }
 
-      categories[category].projects.push(project);
+      categories[categoryName].projects.push(project);
     });
 
-    // Sort categories by a predefined order, then by project count
-    const categoryOrder = [
-      "Agentic Runtimes & Frameworks",
-      "AI Native Infra & Serving",
-      "Orchestration & Scheduling",
-      "RAG & Retrieval",
-      "Observability & Ops",
-    ];
+    // Sort categories by defined order in CATEGORIES array
     return Object.values(categories).sort((a, b) => {
-      const aIndex = categoryOrder.indexOf(a.name);
-      const bIndex = categoryOrder.indexOf(b.name);
+      const aIndex = CATEGORIES.findIndex((c) => c.name === a.name);
+      const bIndex = CATEGORIES.findIndex((c) => c.name === b.name);
 
       if (aIndex !== -1 && bIndex !== -1) {
         return aIndex - bIndex;
@@ -140,6 +114,7 @@ export const OssHubIndex: React.FC = () => {
       if (aIndex !== -1) return -1;
       if (bIndex !== -1) return 1;
 
+      // New categories at the end, sorted by project count
       return b.projects.length - a.projects.length;
     });
   }, [projects]);
@@ -331,7 +306,7 @@ export const OssHubIndex: React.FC = () => {
           {categorizedProjects.slice(0, 12).map((category) => (
             <div key={category.name} className="relative group h-full">
               <Link
-                to={`/osshub/category/${encodeURIComponent(category.name)}`}
+                to={`/osshub/category/${category.slug}`}
                 className={`flex flex-col h-full p-6 rounded-xl border-2 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${getColorClasses(
                   category.color
                 )}`}
