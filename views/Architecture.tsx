@@ -58,7 +58,7 @@ export const Architecture: React.FC = () => {
         scrollTrigger: {
           trigger: ".role-list",
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
         x: -20,
         opacity: 0,
@@ -71,7 +71,7 @@ export const Architecture: React.FC = () => {
         scrollTrigger: {
           trigger: ".interaction-list",
           start: "top 85%",
-          toggleActions: "play none none reverse",
+          toggleActions: "play none none none",
         },
         x: 20,
         opacity: 0,
