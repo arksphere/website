@@ -16,8 +16,8 @@ interface OverviewProps {
 }
 
 const TEXT = {
-  label: "AGENTIC RUNTIME · ARKSPHERE",
-  heroTitle: "Build AI Systems Together",
+  label: "AI NATIVE INFRA · AGENTIC RUNTIME",
+  heroTitle: "Runtime semantics and system models for AI agents",
   subtitle: "A system we develop, verify, and evolve collectively.",
   ctaStart: "Explore Agentic Runtime",
   ctaArch: "Explore OSS Hub",
@@ -708,7 +708,7 @@ const Hero: React.FC<{ navigate: (path: string) => void }> = ({ navigate }) => {
           </span>
         </div>
         <div className="hero-reveal overflow-visible">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-[1.05] md:leading-[1.08] lg:leading-[1.05] pb-1">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 dark:text-white leading-[1.05] md:leading-[1.08] lg:leading-[1.05] pb-1">
             {TEXT.heroTitle}
           </h1>
         </div>
