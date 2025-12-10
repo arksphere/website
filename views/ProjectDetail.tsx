@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { MDXProvider } from "@mdx-js/react";
 import { getAllProjects, getProjectBySlug } from "../src/data/projects-index";
+import { getCategoryByName } from "../src/data/categories";
 import { ProjectMetrics } from "../types";
 import { HealthBars, SmartBadges } from "../components/HealthIndicators";
 
@@ -244,14 +245,18 @@ export const ProjectDetail: React.FC = () => {
         <span className="mx-2 text-gray-400">/</span>
         {project.primaryCategory && (
           <>
-            <Link
-              to={`/osshub/category/${encodeURIComponent(
-                project.primaryCategory
-              )}`}
-              className="text-blue-600 dark:text-blue-400 hover:underline"
-            >
-              {project.primaryCategory}
-            </Link>
+            {(() => {
+              const category = getCategoryByName(project.primaryCategory);
+              const categorySlug = category?.slug || encodeURIComponent(project.primaryCategory);
+              return (
+                <Link
+                  to={`/osshub/category/${categorySlug}`}
+                  className="text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  {project.primaryCategory}
+                </Link>
+              );
+            })()}
             <span className="mx-2 text-gray-400">/</span>
           </>
         )}
