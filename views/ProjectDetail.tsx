@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { MDXProvider } from "@mdx-js/react";
@@ -6,6 +6,8 @@ import { getAllProjects, getProjectBySlug } from "../src/data/projects-index";
 import { getCategoryByName } from "../src/data/categories";
 import { ProjectMetrics } from "../types";
 import { HealthBars, SmartBadges } from "../components/HealthIndicators";
+import { getProjectRankStats } from "../utils/ranking";
+import { ProjectRankStats } from "../components/ProjectRankStats";
 
 const projects = getAllProjects();
 const mdxComponents: Record<string, React.ComponentType<any>> = {
@@ -176,6 +178,63 @@ export const ProjectDetail: React.FC = () => {
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
       .slice(0, 3);
   })();
+
+  // Project Rank Stats Section Component
+  const ProjectRankStatsSection: React.FC<{ slug: string }> = ({ slug }) => {
+    const [rankStats, setRankStats] = useState<{
+      rankOverall?: number;
+      rankInCategory?: number;
+      score?: number;
+      category?: string;
+    } | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
+
+    useEffect(() => {
+      const loadRankStats = async () => {
+        try {
+          const stats = await getProjectRankStats(slug);
+          setRankStats(stats);
+        } catch (err) {
+          console.error('Failed to load rank stats:', err);
+          setError(true);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      loadRankStats();
+    }, [slug]);
+
+    if (loading) {
+      return (
+        <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
+          <div className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
+            Project Rankings
+          </div>
+          <ProjectRankStats loading={true} />
+        </div>
+      );
+    }
+
+    if (error || !rankStats) {
+      return null;
+    }
+
+    return (
+      <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
+        <div className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
+          Project Rankings
+        </div>
+        <ProjectRankStats
+          rankOverall={rankStats.rankOverall}
+          rankInCategory={rankStats.rankInCategory}
+          score={rankStats.score}
+          category={rankStats.category}
+        />
+      </div>
+    );
+  };
 
   let mdxSection: React.ReactNode = null;
 
@@ -475,6 +534,9 @@ export const ProjectDetail: React.FC = () => {
                   No GitHub repository linked
                 </div>
               )}
+
+              {/* Project Rank Stats */}
+              <ProjectRankStatsSection slug={project.slug} />
             </div>
           </div>
 

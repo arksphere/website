@@ -1,8 +1,10 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
 import { getAllProjects } from "../src/data/projects-index";
 import { CATEGORIES, getCategoryBySlug } from "../src/data/categories";
+import { loadAllProjectsWithScores, getProjectsByCategory, RankedProject } from "../utils/ranking";
+import { RankingList } from "../components/RankingList";
 
 export const CategoryView: React.FC = () => {
   const { categorySlug } = useParams<{ categorySlug: string }>();
@@ -39,6 +41,58 @@ export const CategoryView: React.FC = () => {
   const categoryDescription = category
     ? category.description
     : "AI infrastructure and tools";
+
+  // Category Ranking Section Component
+  const CategoryRankingSection: React.FC<{ categoryName: string }> = ({ categoryName }) => {
+    const [rankedProjects, setRankedProjects] = useState<RankedProject[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
+
+    useEffect(() => {
+      const loadCategoryRanking = async () => {
+        try {
+          const projectsWithScores = await loadAllProjectsWithScores();
+          const categoryProjects = getProjectsByCategory(projectsWithScores, categoryName);
+          setRankedProjects(categoryProjects.slice(0, 10)); // Top 10 in category
+        } catch (err) {
+          console.error('Failed to load category ranking data:', err);
+          setError(true);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      loadCategoryRanking();
+    }, [categoryName]);
+
+    if (loading) {
+      return (
+        <div className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            Category Ranking
+          </h2>
+          <div className="bg-white dark:bg-[#1e1e1e] rounded-xl border-2 border-gray-200 dark:border-gray-700 p-8 text-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-4"></div>
+            <p className="text-gray-600 dark:text-gray-400">Loading category rankings...</p>
+          </div>
+        </div>
+      );
+    }
+
+    if (error || rankedProjects.length === 0) {
+      return null;
+    }
+
+    return (
+      <div className="mb-12">
+        <RankingList
+          title="Category Ranking"
+          projects={rankedProjects}
+          showCategory={false}
+        />
+      </div>
+    );
+  };
 
   if (!category) {
     return (
@@ -98,6 +152,9 @@ export const CategoryView: React.FC = () => {
           {filteredProjects.length !== 1 ? "s" : ""} found
         </p>
       </div>
+
+      {/* Category Ranking */}
+      <CategoryRankingSection categoryName={categoryName} />
 
       {/* Projects Grid */}
       {filteredProjects.length > 0 ? (

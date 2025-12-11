@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { getAllProjects } from "../src/data/projects-index";
@@ -8,6 +8,8 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import { CATEGORIES, getCategoryByName } from "../src/data/categories";
+import { loadAllProjectsWithScores, getTopNProjects, RankedProject } from "../utils/ranking";
+import { RankingList } from "../components/RankingList";
 
 interface CategoryInfo {
   name: string;
@@ -120,6 +122,58 @@ export const OssHubIndex: React.FC = () => {
   }, [projects]);
 
   const featuredProjects = projects.filter((p) => p.featured).slice(0, 6);
+
+  // Top Ranked Projects Section Component
+  const TopRankedProjectsSection: React.FC = () => {
+    const [topProjects, setTopProjects] = useState<RankedProject[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
+
+    useEffect(() => {
+      const loadRankingData = async () => {
+        try {
+          const projectsWithScores = await loadAllProjectsWithScores();
+          const topN = getTopNProjects(projectsWithScores, 10);
+          setTopProjects(topN);
+        } catch (err) {
+          console.error('Failed to load ranking data:', err);
+          setError(true);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      loadRankingData();
+    }, []);
+
+    if (loading) {
+      return (
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            Top Ranked Projects
+          </h2>
+          <div className="bg-white dark:bg-[#1e1e1e] rounded-xl border-2 border-gray-200 dark:border-gray-700 p-8 text-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-4"></div>
+            <p className="text-gray-600 dark:text-gray-400">Loading project rankings...</p>
+          </div>
+        </div>
+      );
+    }
+
+    if (error || topProjects.length === 0) {
+      return null;
+    }
+
+    return (
+      <div className="mb-16">
+        <RankingList
+          title="Top Ranked Projects"
+          projects={topProjects}
+          showCategory={true}
+        />
+      </div>
+    );
+  };
 
   // Handle keyboard navigation
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -296,6 +350,9 @@ export const OssHubIndex: React.FC = () => {
           </div>
         </div>
       )}
+
+      {/* Top Ranked Projects */}
+      <TopRankedProjectsSection />
 
       {/* Categories */}
       <div className="mb-16">
