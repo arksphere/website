@@ -22,7 +22,12 @@ export const Navbar: React.FC<NavbarProps> = ({
   // Helper to determine if a link is active
   const isActive = (view: View) => {
     if (view === View.OVERVIEW && location.pathname === "/") return true;
-    if (view === View.OSS_HUB && location.pathname === "/osshub") return true;
+    if (
+      view === View.OSS_HUB &&
+      (location.pathname === "/osshub" ||
+        location.pathname === "/workflow-builder")
+    )
+      return true;
     if (
       view === View.AGENT_RUNTIME &&
       (location.pathname === "/architecture" ||
@@ -177,6 +182,51 @@ export const Navbar: React.FC<NavbarProps> = ({
                           className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
                         >
                           AgentOps
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
+              if (item.view === View.OSS_HUB) {
+                return (
+                  <div key={item.label} className="relative group">
+                    <Link
+                      to={getPath(item.view)}
+                      className={`px-3 py-2 text-sm font-medium transition-colors inline-flex items-center gap-1 ${
+                        isActive(item.view)
+                          ? "text-google-blue"
+                          : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                      }`}
+                    >
+                      {NAV_LABELS[item.label]}
+                      <svg
+                        className="w-3 h-3 opacity-70 group-hover:opacity-100 transition-transform group-hover:rotate-180"
+                        viewBox="0 0 10 6"
+                      >
+                        <path
+                          d="M1 1l4 4 4-4"
+                          stroke="currentColor"
+                          strokeWidth="1.5"
+                          fill="none"
+                        />
+                      </svg>
+                    </Link>
+                    {/* Dropdown */}
+                    <div className="absolute left-0 mt-0 w-48 bg-white dark:bg-[#0D0D0D] border border-gray-200 dark:border-gray-800 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top-left z-50">
+                      <div className="py-1">
+                        <Link
+                          to="/osshub"
+                          className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        >
+                          Overview
+                        </Link>
+                        <Link
+                          to="/workflow-builder"
+                          className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800"
+                        >
+                          Workflow Builder
                         </Link>
                       </div>
                     </div>
@@ -368,6 +418,29 @@ export const Navbar: React.FC<NavbarProps> = ({
                         className="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
                       >
                         AgentOps
+                      </Link>
+                    </div>
+                  </div>
+                );
+              }
+              if (item.view === View.OSS_HUB) {
+                return (
+                  <div key={item.label} className="space-y-1">
+                    <div className="px-3 py-2 text-base font-medium text-gray-900 dark:text-white">
+                      {NAV_LABELS[item.label]}
+                    </div>
+                    <div className="pl-6 space-y-1 border-l-2 border-gray-100 dark:border-gray-800 ml-3">
+                      <Link
+                        to="/osshub"
+                        className="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                      >
+                        Overview
+                      </Link>
+                      <Link
+                        to="/workflow-builder"
+                        className="block px-3 py-2 rounded-md text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800"
+                      >
+                        Workflow Builder
                       </Link>
                     </div>
                   </div>
