@@ -8,7 +8,11 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import { CATEGORIES, getCategoryByName } from "../src/data/categories";
-import { loadAllProjectsWithScores, getTopNProjects, RankedProject } from "../utils/ranking";
+import {
+  loadAllProjectsWithScores,
+  getTopNProjects,
+  RankedProject,
+} from "../utils/ranking";
 import { RankingList } from "../components/RankingList";
 
 interface CategoryInfo {
@@ -136,7 +140,7 @@ export const OssHubIndex: React.FC = () => {
           const topN = getTopNProjects(projectsWithScores, 10);
           setTopProjects(topN);
         } catch (err) {
-          console.error('Failed to load ranking data:', err);
+          console.error("Failed to load ranking data:", err);
           setError(true);
         } finally {
           setLoading(false);
@@ -154,7 +158,9 @@ export const OssHubIndex: React.FC = () => {
           </h2>
           <div className="bg-white dark:bg-[#1e1e1e] rounded-xl border-2 border-gray-200 dark:border-gray-700 p-8 text-center">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-4"></div>
-            <p className="text-gray-600 dark:text-gray-400">Loading project rankings...</p>
+            <p className="text-gray-600 dark:text-gray-400">
+              Loading project rankings...
+            </p>
           </div>
         </div>
       );
@@ -403,7 +409,7 @@ export const OssHubIndex: React.FC = () => {
       </div>
 
       {/* Future Features */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+      <div className="mb-16">
         <div className="p-8 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/30">
           <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
             🤖 AI Workflow Builder
@@ -411,19 +417,6 @@ export const OssHubIndex: React.FC = () => {
           <p className="text-gray-600 dark:text-gray-400 mb-4">
             Select your use case, and AI will automatically build a complete
             tech stack with architecture diagram.
-          </p>
-          <span className="inline-block px-3 py-1 rounded-full bg-yellow-100 dark:bg-yellow-500/20 text-yellow-700 dark:text-yellow-400 text-sm font-semibold">
-            Coming Soon
-          </span>
-        </div>
-
-        <div className="p-8 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/30">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-            📊 Project Analytics
-          </h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-4">
-            View detailed metrics, ratings, and community insights for each
-            project to make informed decisions.
           </p>
           <span className="inline-block px-3 py-1 rounded-full bg-yellow-100 dark:bg-yellow-500/20 text-yellow-700 dark:text-yellow-400 text-sm font-semibold">
             Coming Soon
