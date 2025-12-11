@@ -2,13 +2,13 @@
 title: E2B
 description: Secure open source cloud runtime for AI apps & AI agents.
 date: 2025-07-29T11:02:20.000Z
-website: 'https://e2b.dev/docs'
-github: 'https://github.com/e2b-dev/e2b'
+website: "https://e2b.dev/docs"
+github: "https://github.com/e2b-dev/e2b"
 oss_date: 2023-03-04T13:41:18.000Z
 author: E2B
-featured: true
+featured: false
 tags: []
-thumbnail: 'https://opengraph.githubassets.com/1/e2b-dev/e2b'
+thumbnail: "https://opengraph.githubassets.com/1/e2b-dev/e2b"
 slug: e2b
 category: Agent
 ---
