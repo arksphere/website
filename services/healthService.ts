@@ -14,6 +14,7 @@ export interface HealthScores {
   activity: number;
   community: number;
   quality: number;
+  sustainability?: number;
 }
 
 export interface HealthMetrics {

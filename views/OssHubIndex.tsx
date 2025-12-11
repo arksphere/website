@@ -14,6 +14,10 @@ import {
   RankedProject,
 } from "../utils/ranking";
 import { RankingList } from "../components/RankingList";
+import {
+  workflowBuilderResponsibilities,
+  workflowBuilderCapabilityAnchors,
+} from "../src/data/workflow-builder";
 
 interface CategoryInfo {
   name: string;
@@ -322,6 +326,56 @@ export const OssHubIndex: React.FC = () => {
         </div>
       </div>
 
+      {/* AI Workflow Builder entry */}
+      <section className="mb-16">
+        <div className="p-8 rounded-2xl border border-blue-200 dark:border-blue-900/40 bg-gradient-to-r from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-[#0d1117] dark:to-gray-900">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-200 text-sm font-semibold">
+                🤖 AI Workflow Builder
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
+                Plan AI apps into capability graphs, stacks, and DevTasks
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 max-w-3xl">
+                Dedicated builder page with domain models, planning pipeline, and export options ready for AI coding tools.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  to="/workflow-builder"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Open Builder
+                </Link>
+                <Link
+                  to="/workflow-builder#domain"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-200 dark:border-gray-700 font-semibold hover:border-blue-500 dark:hover:border-blue-500 transition-colors"
+                >
+                  View types
+                </Link>
+              </div>
+            </div>
+            <div className="w-full md:w-auto">
+              <div className="grid grid-cols-2 gap-2 text-sm text-gray-700 dark:text-gray-300">
+                {workflowBuilderCapabilityAnchors.slice(0, 4).map((capability) => (
+                  <div
+                    key={capability.capability}
+                    className="p-3 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/60"
+                  >
+                    <div className="text-[11px] font-semibold text-blue-600 dark:text-blue-300 uppercase">
+                      {capability.capability.replace(/_/g, " ")}
+                    </div>
+                    <div className="font-semibold text-gray-900 dark:text-white">
+                      {capability.title}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Projects */}
       {featuredProjects.length > 0 && (
         <div className="mb-16">
@@ -405,22 +459,6 @@ export const OssHubIndex: React.FC = () => {
               </Link>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Future Features */}
-      <div className="mb-16">
-        <div className="p-8 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/30">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-            🤖 AI Workflow Builder
-          </h3>
-          <p className="text-gray-600 dark:text-gray-400 mb-4">
-            Select your use case, and AI will automatically build a complete
-            tech stack with architecture diagram.
-          </p>
-          <span className="inline-block px-3 py-1 rounded-full bg-yellow-100 dark:bg-yellow-500/20 text-yellow-700 dark:text-yellow-400 text-sm font-semibold">
-            Coming Soon
-          </span>
         </div>
       </div>
 

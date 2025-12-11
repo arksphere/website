@@ -21,7 +21,7 @@ export interface RankedProject {
   activity: number;
   community: number;
   impact: number;
-  freshness: number;
+  sustainability: number;
 }
 
 /**
@@ -36,25 +36,14 @@ export function calculateFreshness(daysSinceLastCommit: number | null): number {
 
 /**
  * Calculate project score based on health metrics
+ * Now directly uses the health score from the API as requested
  */
 export function calculateScore(healthData: any): number {
   if (!healthData?.scores) return 0;
-
-  const health = healthData.scores.health || 0;
-  const activity = healthData.scores.activity || 0;
-  const community = healthData.scores.community || 0;
-  const impact = healthData.scores.quality || 0; // Using quality as impact
-
-  const daysSinceLastCommit = calculateDaysSinceLastCommit(healthData);
-  const freshness = calculateFreshness(daysSinceLastCommit);
-
-  return (
-    RANKING_WEIGHTS.impact * impact +
-    RANKING_WEIGHTS.activity * activity +
-    RANKING_WEIGHTS.health * health +
-    RANKING_WEIGHTS.community * community +
-    RANKING_WEIGHTS.freshness * freshness
-  );
+  
+  // Use the overall health score directly from the API
+  // This ensures consistency with the sidebar display
+  return healthData.scores.health || 0;
 }
 
 /**
@@ -169,7 +158,7 @@ export function getTopNProjects(projects: ProjectWithScore[], n: number = 10): R
       activity: healthData?.scores?.activity || 0,
       community: healthData?.scores?.community || 0,
       impact: healthData?.scores?.quality || 0,
-      freshness: calculateFreshness(calculateDaysSinceLastCommit(healthData))
+      sustainability: healthData?.scores?.sustainability || 0
     };
   });
 }
@@ -201,7 +190,7 @@ export function getProjectsByCategory(projects: ProjectWithScore[], category: st
       activity: healthData?.scores?.activity || 0,
       community: healthData?.scores?.community || 0,
       impact: healthData?.scores?.quality || 0,
-      freshness: calculateFreshness(calculateDaysSinceLastCommit(healthData))
+      sustainability: healthData?.scores?.sustainability || 0
     };
   });
 }

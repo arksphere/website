@@ -53,6 +53,9 @@ export const RankingList: React.FC<RankingListProps> = ({
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                   Impact
                 </th>
+                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                  Sustainability
+                </th>
               </tr>
             </thead>
             <tbody className="bg-white dark:bg-[#1e1e1e] divide-y divide-gray-100 dark:divide-gray-800">
@@ -107,6 +110,11 @@ export const RankingList: React.FC<RankingListProps> = ({
                   <td className="px-6 py-4 whitespace-nowrap">
                     <span className="text-sm text-gray-600 dark:text-gray-400">
                       {Math.round(project.impact)}
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="text-sm text-gray-600 dark:text-gray-400">
+                      {project.sustainability !== undefined ? Math.round(project.sustainability) : '-'}
                     </span>
                   </td>
                 </tr>

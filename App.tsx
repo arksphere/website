@@ -17,6 +17,9 @@ const CategoryView = lazy(() =>
 const ProjectDetail = lazy(() =>
   import("./views/ProjectDetail").then((m) => ({ default: m.ProjectDetail }))
 );
+const WorkflowBuilder = lazy(() =>
+  import("./views/WorkflowBuilder").then((m) => ({ default: m.WorkflowBuilder }))
+);
 const Architecture = lazy(() =>
   import("./views/Architecture").then((m) => ({ default: m.Architecture }))
 );
@@ -136,13 +139,14 @@ function App() {
         >
           <Routes>
             <Route
-              path="/"
-              element={<Overview onChangeView={() => {}} theme={theme} />}
-            />
-            <Route path="/osshub" element={<OssHubIndex />} />
-            <Route
-              path="/osshub/category/:categorySlug"
-              element={<CategoryView />}
+          path="/"
+          element={<Overview onChangeView={() => {}} theme={theme} />}
+        />
+        <Route path="/workflow-builder" element={<WorkflowBuilder />} />
+        <Route path="/osshub" element={<OssHubIndex />} />
+        <Route
+          path="/osshub/category/:categorySlug"
+          element={<CategoryView />}
             />
             <Route path="/osshub/:slug" element={<ProjectDetail />} />
             <Route path="/architecture" element={<Architecture />} />

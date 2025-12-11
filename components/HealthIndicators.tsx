@@ -71,6 +71,7 @@ export const HealthBars: React.FC<HealthIndicatorsProps> = ({ githubUrl, ossDate
   const activityScore = Math.round(healthData.scores.activity);
   const communityScore = Math.round(healthData.scores.community);
   const qualityScore = Math.round(healthData.scores.quality);
+  const sustainabilityScore = healthData.scores.sustainability !== undefined ? Math.round(healthData.scores.sustainability) : undefined;
 
   const daysSinceLastCommit = calculateDaysSinceLastCommit(healthData);
   const updateText = daysSinceLastCommit !== null ? daysSinceLastCommit : '?';
@@ -88,112 +89,105 @@ export const HealthBars: React.FC<HealthIndicatorsProps> = ({ githubUrl, ossDate
     : 'Community impact and maturity based on Stars, Forks, and Release frequency.';
 
   return (
-    <div className="health-bars space-y-4">
-      {/* Overall Health Card */}
-      <div className={`health-overall-card p-4 rounded-lg border-2 ${
-        healthLevel.class === 'excellent' ? 'border-green-500 bg-green-50 dark:bg-green-500/10' :
-        healthLevel.class === 'good' ? 'border-blue-500 bg-blue-50 dark:bg-blue-500/10' :
-        healthLevel.class === 'fair' ? 'border-yellow-500 bg-yellow-50 dark:bg-yellow-500/10' :
-        'border-red-500 bg-red-50 dark:bg-red-500/10'
-      }`}>
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="text-2xl">❤️</div>
-            <div>
-              <div className="text-sm font-medium text-gray-600 dark:text-gray-400">
-                {lang === 'zh' ? '综合健康度' : 'Overall Health'}
-              </div>
-              <div className="text-xs text-gray-500 dark:text-gray-500">
-                {healthLevel.label[lang as 'zh' | 'en'] || healthLevel.label.en}
-              </div>
-            </div>
-          </div>
-          <div className={`text-3xl font-bold ${
+    <div className="mt-6 space-y-2 text-sm">
+      {/* Overall Health Summary */}
+      <div className="text-base font-medium flex items-center gap-2 mb-4">
+        <span className="text-red-500">❤️</span>
+        <span className="text-gray-900 dark:text-white">
+          {lang === 'zh' ? '综合健康度' : 'Overall Health'}:
+        </span>
+        <span className={`font-semibold ${
             healthLevel.class === 'excellent' ? 'text-green-600 dark:text-green-400' :
             healthLevel.class === 'good' ? 'text-blue-600 dark:text-blue-400' :
             healthLevel.class === 'fair' ? 'text-yellow-600 dark:text-yellow-400' :
             'text-red-600 dark:text-red-400'
           }`}>
-            {healthScore}
+          {healthLevel.label[lang as 'zh' | 'en'] || healthLevel.label.en}
+        </span>
+        <span className="text-gray-400">·</span>
+        <span className="font-bold text-gray-900 dark:text-white">{healthScore}</span>
+      </div>
+
+      {/* Mini Bars */}
+      <div className="space-y-3">
+        {/* Activity */}
+        <div className="flex items-center gap-2 justify-between" title={activityTooltip}>
+          <div className="flex items-center gap-2 min-w-[100px]">
+            <span className="text-gray-500">🚀</span>
+            <span className="text-gray-700 dark:text-gray-300">{lang === 'zh' ? '活跃度' : 'Activity'}</span>
+          </div>
+          <div className="flex items-center gap-3 flex-1 justify-end">
+            <span className="font-mono text-xs font-semibold text-gray-900 dark:text-white w-6 text-right">{activityScore}</span>
+            <div className="relative w-full max-w-[120px] h-[6px] bg-gray-200 dark:bg-gray-700/60 rounded overflow-hidden">
+              <div 
+                className="absolute left-0 top-0 h-full bg-green-500 rounded"
+                style={{ width: `${activityScore}%` }}
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Activity Bar */}
-      <div className="health-bar-item" title={activityTooltip}>
-        <div className="flex justify-between items-center mb-1">
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
-            🚀 {lang === 'zh' ? '活跃度' : 'Activity'}
-          </span>
-          <span className="text-sm font-semibold text-gray-900 dark:text-white">{activityScore}</span>
+        {/* Community */}
+        <div className="flex items-center gap-2 justify-between" title={communityTooltip}>
+          <div className="flex items-center gap-2 min-w-[100px]">
+            <span className="text-gray-500">👥</span>
+            <span className="text-gray-700 dark:text-gray-300">{lang === 'zh' ? '社区' : 'Community'}</span>
+          </div>
+          <div className="flex items-center gap-3 flex-1 justify-end">
+            <span className="font-mono text-xs font-semibold text-gray-900 dark:text-white w-6 text-right">{communityScore}</span>
+            <div className="relative w-full max-w-[120px] h-[6px] bg-gray-200 dark:bg-gray-700/60 rounded overflow-hidden">
+              <div 
+                className="absolute left-0 top-0 h-full bg-blue-500 rounded"
+                style={{ width: `${communityScore}%` }}
+              />
+            </div>
+          </div>
         </div>
-        <div className="h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
-          <div
-            className={`h-full rounded-full transition-all duration-500 ${
-              activityLevel.class === 'excellent' ? 'bg-green-500' :
-              activityLevel.class === 'good' ? 'bg-blue-500' :
-              activityLevel.class === 'fair' ? 'bg-yellow-500' :
-              'bg-red-500'
-            }`}
-            style={{ width: `${activityScore}%` }}
-          />
-        </div>
-      </div>
 
-      {/* Community Bar */}
-      <div className="health-bar-item" title={communityTooltip}>
-        <div className="flex justify-between items-center mb-1">
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
-            👥 {lang === 'zh' ? '社区参与度' : 'Community'}
-          </span>
-          <span className="text-sm font-semibold text-gray-900 dark:text-white">{communityScore}</span>
+        {/* Impact */}
+        <div className="flex items-center gap-2 justify-between" title={qualityTooltip}>
+          <div className="flex items-center gap-2 min-w-[100px]">
+            <span className="text-gray-500">📈</span>
+            <span className="text-gray-700 dark:text-gray-300">{lang === 'zh' ? '影响力' : 'Impact'}</span>
+          </div>
+          <div className="flex items-center gap-3 flex-1 justify-end">
+            <span className="font-mono text-xs font-semibold text-gray-900 dark:text-white w-6 text-right">{isNaN(qualityScore) ? '?' : qualityScore}</span>
+            <div className="relative w-full max-w-[120px] h-[6px] bg-gray-200 dark:bg-gray-700/60 rounded overflow-hidden">
+              <div 
+                className="absolute left-0 top-0 h-full bg-purple-500 rounded"
+                style={{ width: `${isNaN(qualityScore) ? 0 : qualityScore}%` }}
+              />
+            </div>
+          </div>
         </div>
-        <div className="h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
-          <div
-            className={`h-full rounded-full transition-all duration-500 ${
-              communityLevel.class === 'excellent' ? 'bg-green-500' :
-              communityLevel.class === 'good' ? 'bg-blue-500' :
-              communityLevel.class === 'fair' ? 'bg-yellow-500' :
-              'bg-red-500'
-            }`}
-            style={{ width: `${communityScore}%` }}
-          />
-        </div>
-      </div>
 
-      {/* Quality/Impact Bar */}
-      <div className="health-bar-item" title={qualityTooltip}>
-        <div className="flex justify-between items-center mb-1">
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-2">
-            📈 {lang === 'zh' ? '影响力' : 'Impact'}
-          </span>
-          <span className="text-sm font-semibold text-gray-900 dark:text-white">
-            {isNaN(qualityScore) ? '?' : qualityScore}
-          </span>
-        </div>
-        <div className="h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
-          <div
-            className={`h-full rounded-full transition-all duration-500 ${
-              qualityLevel.class === 'excellent' ? 'bg-green-500' :
-              qualityLevel.class === 'good' ? 'bg-blue-500' :
-              qualityLevel.class === 'fair' ? 'bg-yellow-500' :
-              'bg-red-500'
-            }`}
-            style={{ width: `${isNaN(qualityScore) ? 0 : qualityScore}%` }}
-          />
-        </div>
+        {/* Sustainability (Optional) */}
+        {sustainabilityScore !== undefined && (
+          <div className="flex items-center gap-2 justify-between">
+            <div className="flex items-center gap-2 min-w-[100px]">
+              <span className="text-gray-500">🌱</span>
+              <span className="text-gray-700 dark:text-gray-300">{lang === 'zh' ? '可持续性' : 'Sustainability'}</span>
+            </div>
+            <div className="flex items-center gap-3 flex-1 justify-end">
+              <span className="font-mono text-xs font-semibold text-gray-900 dark:text-white w-6 text-right">{sustainabilityScore}</span>
+              <div className="relative w-full max-w-[120px] h-[6px] bg-gray-200 dark:bg-gray-700/60 rounded overflow-hidden">
+                <div 
+                  className="absolute left-0 top-0 h-full bg-emerald-500 rounded"
+                  style={{ width: `${sustainabilityScore}%` }}
+                />
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Last Update */}
-      <div className="flex justify-between items-center pt-2 border-t border-gray-200 dark:border-gray-700">
-        <span className="text-sm text-gray-600 dark:text-gray-400 flex items-center gap-2">
-          🕐 {lang === 'zh' ? '最后更新' : 'Last Update'}
-        </span>
-        <span className="text-sm font-medium text-gray-900 dark:text-white">
-          {updateText} {lang === 'zh' ? '天前' : 'days ago'}
+      <div className="pt-4 mt-2 text-xs text-gray-400 dark:text-gray-500 flex items-center gap-1">
+        <span>🕒</span>
+        <span>
+          {lang === 'zh' ? '更新于' : 'Updated'} {updateText} {lang === 'zh' ? '天前' : 'days ago'}
         </span>
       </div>
-
     </div>
   );
 };

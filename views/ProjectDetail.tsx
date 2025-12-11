@@ -6,8 +6,7 @@ import { getAllProjects, getProjectBySlug } from "../src/data/projects-index";
 import { getCategoryByName } from "../src/data/categories";
 import { ProjectMetrics } from "../types";
 import { HealthBars, SmartBadges } from "../components/HealthIndicators";
-import { getProjectRankStats } from "../utils/ranking";
-import { ProjectRankStats } from "../components/ProjectRankStats";
+import { ProjectRankBadges } from "../components/ProjectRankBadges";
 
 const projects = getAllProjects();
 const mdxComponents: Record<string, React.ComponentType<any>> = {
@@ -179,62 +178,7 @@ export const ProjectDetail: React.FC = () => {
       .slice(0, 3);
   })();
 
-  // Project Rank Stats Section Component
-  const ProjectRankStatsSection: React.FC<{ slug: string }> = ({ slug }) => {
-    const [rankStats, setRankStats] = useState<{
-      rankOverall?: number;
-      rankInCategory?: number;
-      score?: number;
-      category?: string;
-    } | null>(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false);
 
-    useEffect(() => {
-      const loadRankStats = async () => {
-        try {
-          const stats = await getProjectRankStats(slug);
-          setRankStats(stats);
-        } catch (err) {
-          console.error('Failed to load rank stats:', err);
-          setError(true);
-        } finally {
-          setLoading(false);
-        }
-      };
-
-      loadRankStats();
-    }, [slug]);
-
-    if (loading) {
-      return (
-        <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
-          <div className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
-            Project Rankings
-          </div>
-          <ProjectRankStats loading={true} />
-        </div>
-      );
-    }
-
-    if (error || !rankStats) {
-      return null;
-    }
-
-    return (
-      <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
-        <div className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
-          Project Rankings
-        </div>
-        <ProjectRankStats
-          rankOverall={rankStats.rankOverall}
-          rankInCategory={rankStats.rankInCategory}
-          score={rankStats.score}
-          category={rankStats.category}
-        />
-      </div>
-    );
-  };
 
   let mdxSection: React.ReactNode = null;
 
@@ -328,9 +272,12 @@ export const ProjectDetail: React.FC = () => {
         {/* Project Header + Content */}
         <div className="space-y-8">
           <div className="mb-2">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              {project.title}
-            </h1>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+                {project.title}
+              </h1>
+              <ProjectRankBadges slug={project.slug} />
+            </div>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-6">
               {frontmatter?.description || project.description}
             </p>
@@ -535,8 +482,7 @@ export const ProjectDetail: React.FC = () => {
                 </div>
               )}
 
-              {/* Project Rank Stats */}
-              <ProjectRankStatsSection slug={project.slug} />
+
             </div>
           </div>
 
