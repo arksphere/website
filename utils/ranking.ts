@@ -108,6 +108,44 @@ export async function loadAllProjectsWithScores(): Promise<ProjectWithScore[]> {
 }
 
 /**
+ * Load projects with scores for a specific category only
+ * This is much faster than loading all projects
+ */
+export async function loadProjectsWithScoresByCategory(
+  categoryName: string
+): Promise<ProjectWithScore[]> {
+  const allProjects = getAllProjects();
+  const categoryProjects = allProjects.filter(
+    p => p.primaryCategory === categoryName
+  );
+  
+  // Parallel API calls with Promise.all for better performance
+  const promises = categoryProjects.map(async (project) => {
+    try {
+      if (project.github) {
+        const repo = extractRepoFromUrl(project.github);
+        if (repo) {
+          const healthData = await fetchHealthData(repo, 'en');
+          if (healthData) {
+            return {
+              ...project,
+              score: calculateScore(healthData),
+              healthData
+            };
+          }
+        }
+      }
+      return { ...project, score: 0 };
+    } catch (error) {
+      console.error(`Error loading health data for ${project.slug}:`, error);
+      return { ...project, score: 0 };
+    }
+  });
+  
+  return await Promise.all(promises);
+}
+
+/**
  * Get top N projects by score
  */
 export function getTopNProjects(projects: ProjectWithScore[], n: number = 10): RankedProject[] {

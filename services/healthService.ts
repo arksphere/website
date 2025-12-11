@@ -232,6 +232,11 @@ export function getHealthLevel(score: number): HealthLevel {
 
 // Calculate days since last commit (with fallback)
 export function calculateDaysSinceLastCommit(data: HealthData): number | null {
+  // Check if metrics exists first
+  if (!data || !data.metrics) {
+    return null;
+  }
+  
   if (data.metrics.daysSinceLastCommit !== null && data.metrics.daysSinceLastCommit !== undefined) {
     return data.metrics.daysSinceLastCommit;
   }

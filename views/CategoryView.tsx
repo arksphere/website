@@ -3,7 +3,11 @@ import { Helmet } from "react-helmet-async";
 import { Link, useParams } from "react-router-dom";
 import { getAllProjects } from "../src/data/projects-index";
 import { CATEGORIES, getCategoryBySlug } from "../src/data/categories";
-import { loadAllProjectsWithScores, getProjectsByCategory, RankedProject } from "../utils/ranking";
+import {
+  loadProjectsWithScoresByCategory,
+  getProjectsByCategory,
+  RankedProject,
+} from "../utils/ranking";
 import { RankingList } from "../components/RankingList";
 
 export const CategoryView: React.FC = () => {
@@ -43,7 +47,9 @@ export const CategoryView: React.FC = () => {
     : "AI infrastructure and tools";
 
   // Category Ranking Section Component
-  const CategoryRankingSection: React.FC<{ categoryName: string }> = ({ categoryName }) => {
+  const CategoryRankingSection: React.FC<{ categoryName: string }> = ({
+    categoryName,
+  }) => {
     const [rankedProjects, setRankedProjects] = useState<RankedProject[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
@@ -51,11 +57,16 @@ export const CategoryView: React.FC = () => {
     useEffect(() => {
       const loadCategoryRanking = async () => {
         try {
-          const projectsWithScores = await loadAllProjectsWithScores();
-          const categoryProjects = getProjectsByCategory(projectsWithScores, categoryName);
+          const projectsWithScores = await loadProjectsWithScoresByCategory(
+            categoryName
+          );
+          const categoryProjects = getProjectsByCategory(
+            projectsWithScores,
+            categoryName
+          );
           setRankedProjects(categoryProjects.slice(0, 10)); // Top 10 in category
         } catch (err) {
-          console.error('Failed to load category ranking data:', err);
+          console.error("Failed to load category ranking data:", err);
           setError(true);
         } finally {
           setLoading(false);
@@ -73,7 +84,9 @@ export const CategoryView: React.FC = () => {
           </h2>
           <div className="bg-white dark:bg-[#1e1e1e] rounded-xl border-2 border-gray-200 dark:border-gray-700 p-8 text-center">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-4"></div>
-            <p className="text-gray-600 dark:text-gray-400">Loading category rankings...</p>
+            <p className="text-gray-600 dark:text-gray-400">
+              Loading category rankings...
+            </p>
           </div>
         </div>
       );
