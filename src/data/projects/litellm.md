@@ -1,18 +1,14 @@
 ---
 title: LiteLLM
-slug: litellm
-date: 2025-09-27T03:33:41.727Z
-website: 'https://docs.litellm.ai/docs/'
-github: 'https://github.com/BerriAI/litellm'
+date: 2025-12-11T14:41:49.627Z
+website: https://docs.litellm.ai/docs/
+github: https://github.com/berriai/litellm
 oss_date: 2023-07-27T00:09:52.000Z
 author: BerriAI
 tags: []
-description: >-
-  LiteLLM is a lightweight LLM gateway and proxy framework providing a unified
-  OpenAI-format API, routing, rate-limits, and pluggable provider integrations
-  for production deployments.
+description: LiteLLM is a lightweight LLM gateway and proxy framework providing a unified OpenAI-format API, routing, rate-limits, and pluggable provider integrations for production deployments.
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/BerriAI/litellm'
+thumbnail: https://opengraph.githubassets.com/1/BerriAI/litellm
 category: AI Infra
 ---
 

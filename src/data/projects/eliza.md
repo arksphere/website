@@ -4,7 +4,7 @@ description: ElizaOS is an open-source, extensible platform for building, deploy
 date: 2025-11-28T01:29:07.349Z
 oss_date: 2023-08-01T00:00:00.000Z
 website: https://eliza.how/
-github: https://github.com/elizaOS/eliza
+github: https://github.com/elizaos/eliza
 author: ElizaOS
 tags: []
 featured: false

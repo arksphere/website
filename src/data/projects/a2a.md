@@ -4,7 +4,7 @@ description: An open protocol enabling communication and interoperability betwee
 date: 2025-12-05T11:57:13.573Z
 website: https://a2a-protocol.org/
 author: Google
-github: https://github.com/a2aproject/A2A
+github: https://github.com/a2aproject/a2a
 oss_date: 2025-03-25T18:44:21.000Z
 tags: []
 featured: false

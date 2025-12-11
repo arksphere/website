@@ -1,18 +1,15 @@
 ---
 title: LightGBM
-description: >-
-  A fast, distributed, high-performance gradient boosting framework for decision
-  tree algorithms, widely used for ranking, classification, and large-scale ML
-  tasks.
-date: 2025-09-20T06:29:06.727Z
-website: 'https://lightgbm.readthedocs.io/'
-github: 'https://github.com/microsoft/LightGBM'
+description: A fast, distributed, high-performance gradient boosting framework for decision tree algorithms, widely used for ranking, classification, and large-scale ML tasks.
+date: 2025-12-11T14:40:20.859Z
+website: https://lightgbm.readthedocs.io/
+github: https://github.com/microsoft/lightgbm
 oss_date: 2016-08-05T05:45:50.000Z
 author: Microsoft
 tags:
   - training
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/microsoft/LightGBM'
+thumbnail: https://opengraph.githubassets.com/1/microsoft/LightGBM
 slug: lightgbm
 category: Training
 ---

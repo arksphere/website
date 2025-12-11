@@ -3,7 +3,7 @@ title: MaxText
 description: A high-performance, highly scalable open-source LLM library and reference implementation built with Python and JAX, targeting Google Cloud TPUs and GPUs.
 date: 2025-11-28T02:23:43.597Z
 website: https://maxtext.readthedocs.io/en/latest/
-github: https://github.com/AI-Hypercomputer/maxtext
+github: https://github.com/ai-hypercomputer/maxtext
 oss_date: 2023-02-28T19:47:29.000Z
 author: AI-Hypercomputer
 tags: []

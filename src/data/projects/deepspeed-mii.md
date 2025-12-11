@@ -1,16 +1,14 @@
 ---
 title: DeepSpeed-MII
-description: >-
-  Open-source inference library from DeepSpeed for low-latency, high-throughput
-  model inference and deployment.
-date: 2025-09-27T01:57:16.574Z
-github: 'https://github.com/deepspeedai/DeepSpeed-MII'
+description: Open-source inference library from DeepSpeed for low-latency, high-throughput model inference and deployment.
+date: 2025-12-11T14:40:57.396Z
+github: https://github.com/deepspeedai/deepspeed-mii
 oss_date: 2022-03-23T22:30:45.000Z
 author: Microsoft
 tags:
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/deepspeedai/DeepSpeed-MII'
+thumbnail: https://opengraph.githubassets.com/1/deepspeedai/DeepSpeed-MII
 slug: deepspeed-mii
 category: Inference
 ---

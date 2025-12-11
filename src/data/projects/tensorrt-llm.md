@@ -1,17 +1,15 @@
 ---
 title: TensorRT-LLM
-description: >-
-  NVIDIA's open-source toolbox for optimized LLM inference, designed for
-  efficient GPU serving and enterprise deployment.
-date: 2025-09-13T09:30:33.814Z
-website: 'https://nvidia.github.io/TensorRT-LLM/'
-github: 'https://github.com/NVIDIA/TensorRT-LLM'
+description: NVIDIA's open-source toolbox for optimized LLM inference, designed for efficient GPU serving and enterprise deployment.
+date: 2025-12-11T14:38:39.786Z
+website: https://nvidia.github.io/TensorRT-LLM/
+github: https://github.com/nvidia/tensorrt-llm
 oss_date: 2023-08-16T17:14:27.000Z
 author: NVIDIA
 tags:
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/NVIDIA/TensorRT-LLM'
+thumbnail: https://opengraph.githubassets.com/1/NVIDIA/TensorRT-LLM
 category: Inference
 ---
 

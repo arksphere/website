@@ -4,7 +4,7 @@ description: Label Studio is a multi-type data labeling and annotation tool with
 date: 2025-11-28T01:27:33.633Z
 oss_date: 2019-06-19T02:00:44.000Z
 website: https://labelstud.io
-github: https://github.com/HumanSignal/label-studio
+github: https://github.com/humansignal/label-studio
 author: HumanSignal
 tags:
   - rag

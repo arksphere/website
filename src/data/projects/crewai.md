@@ -3,7 +3,7 @@ title: CrewAI
 description: Discover CrewAI, the open-source Python framework for high-performance multi-agent orchestration, enabling seamless collaboration and customizable workflows.
 date: 2025-11-28T02:19:34.756Z
 website: https://crewai.com/
-github: https://github.com/crewAIInc/crewAI
+github: https://github.com/crewaiinc/crewai
 oss_date: 2023-10-27T03:26:59.000Z
 demo: ""
 author: CrewAI

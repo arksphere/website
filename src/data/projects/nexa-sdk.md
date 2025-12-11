@@ -1,17 +1,15 @@
 ---
 title: Nexa SDK
-description: >-
-  An on-device inference SDK that runs multimodal and text models across CPU,
-  GPU and NPUs, with support for multiple model formats.
-date: 2025-10-01T01:49:36.952Z
-website: 'https://docs.nexa.ai/'
-github: 'https://github.com/NexaAI/nexa-sdk'
+description: An on-device inference SDK that runs multimodal and text models across CPU, GPU and NPUs, with support for multiple model formats.
+date: 2025-12-11T14:39:14.156Z
+website: https://docs.nexa.ai/
+github: https://github.com/nexaai/nexa-sdk
 oss_date: 2024-08-16T20:13:07.000Z
 author: NexaAI
 tags:
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/NexaAI/nexa-sdk'
+thumbnail: https://opengraph.githubassets.com/1/NexaAI/nexa-sdk
 category: Inference
 ---
 

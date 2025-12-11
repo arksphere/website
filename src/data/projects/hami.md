@@ -1,18 +1,15 @@
 ---
 title: HAMi
-description: >-
-  Discover HAMi, the middleware that simplifies AI resource management across
-  diverse hardware, enhancing performance and cluster utilization in
-  cloud-native environments.
-date: 2025-10-10T05:05:15.239Z
+description: Discover HAMi, the middleware that simplifies AI resource management across diverse hardware, enhancing performance and cluster utilization in cloud-native environments.
+date: 2025-12-11T14:40:39.530Z
 oss_date: 2021-09-14T11:51:49.000Z
-website: 'https://project-hami.io'
-github: 'https://github.com/Project-HAMi/HAMi'
+website: https://project-hami.io
+github: https://github.com/project-hami/hami
 author: Project-HAMi
 tags:
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/Project-HAMi/HAMi'
+thumbnail: https://opengraph.githubassets.com/1/Project-HAMi/HAMi
 category: Inference
 ---
 

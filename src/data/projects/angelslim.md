@@ -4,7 +4,7 @@ description: AngelSlim is a model compression toolkit from Tencent providing eas
 date: 2025-12-05T12:01:28.662Z
 oss_date: 2025-07-04T02:10:39.000Z
 website: https://angelslim.readthedocs.io
-github: https://github.com/Tencent/AngelSlim
+github: https://github.com/tencent/angelslim
 author: Tencent
 tags:
   - inference

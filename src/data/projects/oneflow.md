@@ -1,17 +1,15 @@
 ---
 title: OneFlow
-description: >-
-  OneFlow is a deep learning framework designed for scalable and efficient
-  training.
-date: 2025-11-06T17:51:54.180Z
+description: OneFlow is a deep learning framework designed for scalable and efficient training.
+date: 2025-12-11T14:39:05.822Z
 oss_date: 2017-02-11T06:09:53.000Z
-website: 'http://www.oneflow.org'
-github: 'https://github.com/Oneflow-Inc/oneflow'
+website: http://www.oneflow.org
+github: https://github.com/oneflow-inc/oneflow
 author: Oneflow
 tags:
   - training
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/Oneflow-Inc/oneflow'
+thumbnail: https://opengraph.githubassets.com/1/Oneflow-Inc/oneflow
 category: Training
 ---
 

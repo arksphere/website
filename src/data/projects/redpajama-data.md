@@ -1,17 +1,15 @@
 ---
 title: RedPajama Data
-description: >-
-  RedPajama Data provides open tools and prepared corpora for training large
-  language models and reproducible data processing.
-date: 2025-11-02T12:56:02.422Z
+description: RedPajama Data provides open tools and prepared corpora for training large language models and reproducible data processing.
+date: 2025-12-11T14:38:46.502Z
 oss_date: 2023-04-14T20:43:41.000Z
-website: 'https://huggingface.co/datasets/togethercomputer/RedPajama-Data'
-github: 'https://github.com/togethercomputer/RedPajama-Data'
+website: https://huggingface.co/datasets/togethercomputer/RedPajama-Data
+github: https://github.com/togethercomputer/redpajama-data
 author: Together Computer
 tags:
   - training
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/togethercomputer/RedPajama-Data'
+thumbnail: https://opengraph.githubassets.com/1/togethercomputer/RedPajama-Data
 category: Training
 ---
 

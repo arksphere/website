@@ -1,15 +1,13 @@
 ---
 author: Foundation Agents
-date: 2025-07-23T00:00:00.000Z
-description: >-
-  Multi-agent framework that automates software development processes from
-  requirements to code implementation through collaborative AI agent teams.
+date: 2025-12-11T14:39:31.671Z
+description: Multi-agent framework that automates software development processes from requirements to code implementation through collaborative AI agent teams.
 featured: false
-github: 'https://github.com/FoundationAgents/MetaGPT'
+github: https://github.com/foundationagents/metagpt
 oss_date: 2023-06-30T09:04:55.000Z
-website: 'https://mgx.dev/'
+website: https://mgx.dev/
 tags: []
-thumbnail: 'https://opengraph.githubassets.com/1/FoundationAgents/MetaGPT'
+thumbnail: https://opengraph.githubassets.com/1/FoundationAgents/MetaGPT
 title: MetaGPT
 slug: metagpt
 category: Agent

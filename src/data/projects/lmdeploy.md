@@ -1,19 +1,16 @@
 ---
 title: LMDeploy
 slug: lmdeploy
-date: 2025-09-27T04:24:19.346Z
-website: 'https://lmdeploy.readthedocs.io/en/latest/'
-github: 'https://github.com/InternLM/lmdeploy'
+date: 2025-12-11T14:39:46.836Z
+website: https://lmdeploy.readthedocs.io/en/latest/
+github: https://github.com/internlm/lmdeploy
 oss_date: 2023-06-15T12:38:06.000Z
 author: InternLM
 tags:
   - inference
-description: >-
-  LMDeploy is a toolkit for compressing, deploying and serving large language
-  models, providing optimized inference engines, quantization and distribution
-  features.
+description: LMDeploy is a toolkit for compressing, deploying and serving large language models, providing optimized inference engines, quantization and distribution features.
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/InternLM/lmdeploy'
+thumbnail: https://opengraph.githubassets.com/1/InternLM/lmdeploy
 category: Inference
 ---
 

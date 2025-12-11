@@ -4,7 +4,7 @@ date: 2025-12-05T12:01:57.977Z
 description: A zero-code framework for creating LLM-powered intelligent agents through natural language descriptions, with self-managed vector stores and runtime traces.
 featured: false
 website: https://autoagent-ai.github.io/
-github: https://github.com/HKUDS/AutoAgent
+github: https://github.com/hkuds/autoagent
 oss_date: 2025-02-06T12:47:15.000Z
 tags: []
 thumbnail: https://opengraph.githubassets.com/1/HKUDS/AutoAgent

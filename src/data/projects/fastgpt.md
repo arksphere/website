@@ -1,18 +1,15 @@
 ---
 title: FastGPT
-description: >-
-  Discover FastGPT: a powerful platform for seamless data processing and AI
-  workflow orchestration, enabling easy development of advanced
-  question-answering systems.
-date: 2025-07-27T05:00:00.000Z
-website: 'https://fastgpt.io/'
+description: "Discover FastGPT: a powerful platform for seamless data processing and AI workflow orchestration, enabling easy development of advanced question-answering systems."
+date: 2025-12-11T14:40:52.053Z
+website: https://fastgpt.io/
 author: Labring
-github: 'https://github.com/labring/FastGPT'
+github: https://github.com/labring/fastgpt
 oss_date: 2023-02-23T16:53:25.000Z
 tags:
   - rag
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/labring/FastGPT'
+thumbnail: https://opengraph.githubassets.com/1/labring/FastGPT
 slug: fastgpt
 category: RAG
 ---

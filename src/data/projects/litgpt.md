@@ -1,17 +1,15 @@
 ---
 title: LitGPT
-description: >-
-  A high-performance, engineering-focused LLM toolkit that provides end-to-end
-  recipes and practical tutorials for training and deploying large models.
-date: 2025-10-02T12:05:40.222Z
-website: 'https://lightning.ai/'
-github: 'https://github.com/Lightning-AI/litgpt'
+description: A high-performance, engineering-focused LLM toolkit that provides end-to-end recipes and practical tutorials for training and deploying large models.
+date: 2025-12-11T14:40:10.099Z
+website: https://lightning.ai/
+github: https://github.com/lightning-ai/litgpt
 oss_date: 2023-05-04T17:46:11.000Z
 author: Lightning-AI
 tags:
   - training
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/Lightning-AI/litgpt'
+thumbnail: https://opengraph.githubassets.com/1/Lightning-AI/litgpt
 category: Training
 ---
 

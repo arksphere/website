@@ -4,7 +4,7 @@ description: An open-source SQL-native memory engine that provides persistent, q
 date: 2025-11-28T02:24:46.680Z
 oss_date: 2025-07-24T07:07:51Z
 website: https://memorilabs.ai
-github: https://github.com/GibsonAI/Memori
+github: https://github.com/gibsonai/memori
 author: GibsonAI
 tags:
   - rag

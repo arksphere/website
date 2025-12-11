@@ -1,16 +1,14 @@
 ---
 title: Volcano SDK
-description: >-
-  Volcano SDK is a TypeScript-first multi-provider AI agent SDK that enables
-  chaining LLM reasoning with MCP tools, observability and production patterns.
-date: 2025-10-16T01:56:00.000Z
+description: Volcano SDK is a TypeScript-first multi-provider AI agent SDK that enables chaining LLM reasoning with MCP tools, observability and production patterns.
+date: 2025-12-11T14:38:18.122Z
 oss_date: 2025-09-22T22:32:21.000Z
-website: 'https://volcano.dev/'
-github: 'https://github.com/Kong/volcano-sdk'
+website: https://volcano.dev/
+github: https://github.com/kong/volcano-sdk
 author: Kong
 tags: []
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/Kong/volcano-sdk'
+thumbnail: https://opengraph.githubassets.com/1/Kong/volcano-sdk
 category: Agent
 ---
 

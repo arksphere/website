@@ -1,17 +1,14 @@
 ---
 title: AutoRAG
-description: >-
-  AutoRAG provides automated RAG pipeline construction tools, simplifying
-  document retrieval and Retrieval-Augmented Generation (RAG) integration
-  workflows.
-date: 2025-10-02T12:28:33.552Z
-github: 'https://github.com/Marker-Inc-Korea/AutoRAG'
+description: AutoRAG provides automated RAG pipeline construction tools, simplifying document retrieval and Retrieval-Augmented Generation (RAG) integration workflows.
+date: 2025-12-11T14:41:07.504Z
+github: https://github.com/marker-inc-korea/autorag
 oss_date: 2024-01-10T12:25:00.000Z
 author: Marker-Inc-Korea
 tags:
   - rag
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/Marker-Inc-Korea/AutoRAG'
+thumbnail: https://opengraph.githubassets.com/1/Marker-Inc-Korea/AutoRAG
 category: RAG
 ---
 

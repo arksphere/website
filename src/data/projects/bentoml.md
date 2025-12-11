@@ -1,18 +1,16 @@
 ---
 title: BentoML
 slug: bentoml
-date: 2025-09-26T16:39:21.293Z
-website: 'https://bentoml.com'
-github: 'https://github.com/bentoml/BentoML'
+date: 2025-12-11T14:41:11.659Z
+website: https://bentoml.com
+github: https://github.com/bentoml/bentoml
 oss_date: 2019-04-02T01:39:27.000Z
 author: BentoML
 tags:
   - inference
-description: >-
-  BentoML is an open-source framework for packaging, containerizing, and
-  deploying machine learning models into production-ready services.
+description: BentoML is an open-source framework for packaging, containerizing, and deploying machine learning models into production-ready services.
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/bentoml/BentoML'
+thumbnail: https://opengraph.githubassets.com/1/bentoml/BentoML
 category: Inference
 ---
 

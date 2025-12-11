@@ -4,7 +4,7 @@ description: Mobile-Agent is a cross-platform GUI agent family for multimodal pe
 date: 2025-11-28T02:25:14.669Z
 oss_date: 2024-01-26T14:17:06.000Z
 website: https://arxiv.org/abs/2508.15144
-github: https://github.com/X-PLUG/MobileAgent
+github: https://github.com/x-plug/mobileagent
 author: Alibaba
 tags:
   - multimodal

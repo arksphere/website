@@ -1,11 +1,9 @@
 ---
 title: OpenRLHF
-description: >-
-  An easy-to-use, high-performance open-source RLHF framework built on Ray, vLLM
-  and DeepSpeed, supporting distributed and hybrid-engine training.
-date: 2025-09-30T04:05:00.213Z
-website: 'https://openrlhf.readthedocs.io/'
-github: 'https://github.com/OpenRLHF/OpenRLHF'
+description: An easy-to-use, high-performance open-source RLHF framework built on Ray, vLLM and DeepSpeed, supporting distributed and hybrid-engine training.
+date: 2025-12-11T14:39:00.742Z
+website: https://openrlhf.readthedocs.io/
+github: https://github.com/openrlhf/openrlhf
 oss_date: 2023-07-30T02:20:13.000Z
 author: OpenRLHF team
 tags:
@@ -13,7 +11,7 @@ tags:
   - training
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/OpenRLHF/OpenRLHF'
+thumbnail: https://opengraph.githubassets.com/1/OpenRLHF/OpenRLHF
 category: Inference
 ---
 

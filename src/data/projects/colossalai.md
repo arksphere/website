@@ -3,7 +3,7 @@ title: Colossal-AI
 description: "Discover Colossal-AI: an open-source solution for efficient large-scale training and inference, featuring advanced parallelism and memory management for optimal performance."
 date: 2025-11-28T02:18:14.558Z
 website: https://www.colossalai.org/
-github: https://github.com/hpcaitech/ColossalAI
+github: https://github.com/hpcaitech/colossalai
 oss_date: 2021-10-28T16:19:44.000Z
 demo: ""
 author: HPC-AI Tech / ColossalAI

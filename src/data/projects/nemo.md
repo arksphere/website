@@ -1,17 +1,15 @@
 ---
 title: NeMo
-description: >-
-  NVIDIA's NeMo framework for speech, TTS, multimodal and LLM training &
-  fine-tuning.
-date: 2025-10-02T12:20:35.693Z
-website: 'https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/main/'
-github: 'https://github.com/NVIDIA/NeMo'
+description: NVIDIA's NeMo framework for speech, TTS, multimodal and LLM training & fine-tuning.
+date: 2025-12-11T14:39:17.327Z
+website: https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/main/
+github: https://github.com/nvidia/nemo
 oss_date: 2019-08-05T20:16:42.000Z
 author: NVIDIA
 tags:
   - training
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/NVIDIA/NeMo'
+thumbnail: https://opengraph.githubassets.com/1/NVIDIA/NeMo
 category: Training
 ---
 

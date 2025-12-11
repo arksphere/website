@@ -1,18 +1,15 @@
 ---
 title: LMCache
-description: >-
-  A high-performance KV cache layer for LLM serving that reduces
-  time-to-first-token and increases throughput, especially for long-context and
-  multi-turn scenarios.
-date: 2025-09-20T06:21:38.023Z
-website: 'https://lmcache.ai/'
-github: 'https://github.com/LMCache/LMCache'
+description: A high-performance KV cache layer for LLM serving that reduces time-to-first-token and increases throughput, especially for long-context and multi-turn scenarios.
+date: 2025-12-11T14:39:49.749Z
+website: https://lmcache.ai/
+github: https://github.com/lmcache/lmcache
 oss_date: 2024-05-28T21:06:04.000Z
 author: LMCache
 tags:
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/LMCache/LMCache'
+thumbnail: https://opengraph.githubassets.com/1/LMCache/LMCache
 slug: lmcache
 category: Inference
 ---

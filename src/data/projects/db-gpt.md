@@ -1,17 +1,14 @@
 ---
 title: DB-GPT
-description: >-
-  DB-GPT is an open-source framework focused on data-native applications,
-  integrating RAG, Text2SQL, and multi-backend adapters to simplify building
-  intelligent database-driven apps.
-date: 2025-10-06T10:02:56.779Z
+description: DB-GPT is an open-source framework focused on data-native applications, integrating RAG, Text2SQL, and multi-backend adapters to simplify building intelligent database-driven apps.
+date: 2025-12-11T14:41:22.295Z
 oss_date: 2023-01-01T00:00:00.000Z
-github: 'https://github.com/eosphoros-ai/DB-GPT'
+github: https://github.com/eosphoros-ai/db-gpt
 author: Eosphoros AI
 tags:
   - rag
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/eosphoros-ai/DB-GPT'
+thumbnail: https://opengraph.githubassets.com/1/eosphoros-ai/DB-GPT
 category: RAG
 ---
 

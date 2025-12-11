@@ -1,17 +1,15 @@
 ---
 title: DeepSpeed
-description: >-
-  A high-performance library for training and inference that dramatically speeds
-  up large-scale deep learning while reducing cost.
-date: 2025-10-02T12:10:53.559Z
-website: 'https://www.deepspeed.ai/'
-github: 'https://github.com/deepspeedai/DeepSpeed'
+description: A high-performance library for training and inference that dramatically speeds up large-scale deep learning while reducing cost.
+date: 2025-12-11T14:41:27.590Z
+website: https://www.deepspeed.ai/
+github: https://github.com/deepspeedai/deepspeed
 oss_date: 2020-01-23T18:35:18.000Z
 author: DeepSpeed Team
 tags:
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/deepspeedai/DeepSpeed'
+thumbnail: https://opengraph.githubassets.com/1/deepspeedai/DeepSpeed
 category: Inference
 ---
 

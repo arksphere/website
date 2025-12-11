@@ -1,16 +1,14 @@
 ---
 title: BitNet
-description: >-
-  BitNet (bitnet.cpp) is Microsoft's open-source inference framework for 1-bit
-  LLMs, offering optimized CPU/GPU kernels for efficient low-bit inference.
-date: 2025-10-02T05:40:36.141Z
-github: 'https://github.com/microsoft/BitNet'
+description: BitNet (bitnet.cpp) is Microsoft's open-source inference framework for 1-bit LLMs, offering optimized CPU/GPU kernels for efficient low-bit inference.
+date: 2025-12-11T14:41:15.229Z
+github: https://github.com/microsoft/bitnet
 oss_date: 2024-08-05T09:07:38.000Z
 author: Microsoft
 tags:
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/microsoft/BitNet'
+thumbnail: https://opengraph.githubassets.com/1/microsoft/BitNet
 category: Inference
 ---
 

@@ -1,18 +1,15 @@
 ---
 title: MInference
-description: >-
-  MInference is a framework for long-context LLM inference that accelerates
-  pre-filling and large-context processing using dynamic sparse attention and
-  optimized kernels.
-date: 2025-09-27T04:41:45.816Z
-website: 'https://aka.ms/MInference'
-github: 'https://github.com/microsoft/MInference'
+description: MInference is a framework for long-context LLM inference that accelerates pre-filling and large-context processing using dynamic sparse attention and optimized kernels.
+date: 2025-12-11T14:39:28.188Z
+website: https://aka.ms/MInference
+github: https://github.com/microsoft/minference
 oss_date: 2024-05-22T12:59:47.000Z
 author: Microsoft
 tags:
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/microsoft/MInference'
+thumbnail: https://opengraph.githubassets.com/1/microsoft/MInference
 slug: minference
 category: Inference
 ---

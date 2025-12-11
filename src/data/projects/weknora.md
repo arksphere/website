@@ -1,9 +1,9 @@
 ---
 title: WeKnora
-description: WeKnora — an open-source document understanding and retrieval framework from Tencent that combines LLMs and RAG for multimodal document search and knowledge graph construction.
+description: An open-source document understanding and retrieval framework from Tencent that combines LLMs and RAG for multimodal document search and knowledge graph construction.
 date: 2025-12-05T12:04:52.311Z
 website: https://weknora.weixin.qq.com
-github: https://github.com/Tencent/WeKnora
+github: https://github.com/tencent/weknora
 oss_date: 2025-07-22T08:01:23.000Z
 author: Tencent
 tags:

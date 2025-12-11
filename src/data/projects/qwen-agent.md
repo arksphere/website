@@ -1,19 +1,16 @@
 ---
 title: Qwen-Agent
-date: 2025-09-27T04:10:00.000Z
-description: >-
-  Qwen-Agent is an open-source agent framework that provides tool calling, RAG,
-  code interpreter and deployment examples to quickly build intelligent
-  assistants and applications.
-website: 'https://qwen.readthedocs.io/'
-github: 'https://github.com/QwenLM/Qwen-Agent'
+date: 2025-12-11T14:38:52.413Z
+description: Qwen-Agent is an open-source agent framework that provides tool calling, RAG, code interpreter and deployment examples to quickly build intelligent assistants and applications.
+website: https://qwen.readthedocs.io/
+github: https://github.com/qwenlm/qwen-agent
 oss_date: 2023-09-22T02:24:56.000Z
 author: QwenLM
 tags:
   - agent-framework
   - rag
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/QwenLM/Qwen-Agent'
+thumbnail: https://opengraph.githubassets.com/1/QwenLM/Qwen-Agent
 category: RAG
 ---
 

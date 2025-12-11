@@ -1,17 +1,15 @@
 ---
 title: Gymnasium
-description: >-
-  An API standard for single-agent reinforcement learning environments, with
-  popular reference environments and related utilities (formerly Gym).
-date: 2025-10-06T08:37:42.931Z
+description: An API standard for single-agent reinforcement learning environments, with popular reference environments and related utilities (formerly Gym).
+date: 2025-12-11T14:40:46.323Z
 oss_date: 2022-09-08T01:58:05.000Z
-website: 'https://gymnasium.farama.org'
-github: 'https://github.com/Farama-Foundation/Gymnasium'
+website: https://gymnasium.farama.org
+github: https://github.com/farama-foundation/gymnasium
 author: Farama Foundation
 tags:
   - training
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/Farama-Foundation/Gymnasium'
+thumbnail: https://opengraph.githubassets.com/1/Farama-Foundation/Gymnasium
 category: Training
 ---
 

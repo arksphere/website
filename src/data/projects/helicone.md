@@ -1,17 +1,14 @@
 ---
 title: Helicone
 slug: helicone
-date: 2025-09-27T01:30:00.000Z
-github: 'https://github.com/Helicone/helicone'
+date: 2025-12-11T14:40:34.840Z
+github: https://github.com/helicone/helicone
 oss_date: 2023-01-31T22:34:44.000Z
 author: Helicone
 tags: []
-description: >-
-  Helicone is an open-source LLM observability and analytics platform that
-  captures requests, traces and sessions to help developers debug, evaluate and
-  optimize model usage.
+description: Helicone is an open-source LLM observability and analytics platform that captures requests, traces and sessions to help developers debug, evaluate and optimize model usage.
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/Helicone/helicone'
+thumbnail: https://opengraph.githubassets.com/1/Helicone/helicone
 category: AI Infra
 ---
 

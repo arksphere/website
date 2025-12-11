@@ -1,18 +1,16 @@
 ---
 title: Kong
 slug: kong
-date: 2025-09-27T03:07:01.295Z
-website: 'https://docs.konghq.com/'
-github: 'https://github.com/Kong/kong'
+date: 2025-12-11T14:40:31.702Z
+website: https://docs.konghq.com/
+github: https://github.com/kong/kong
 oss_date: 2014-11-17T23:56:08.000Z
-demo: 'https://konghq.com/products/kong-ai-gateway'
+demo: https://konghq.com/products/kong-ai-gateway
 author: Kong
-description: >-
-  Kong is a high-performance, cloud-native API gateway ideal for managing
-  LLM/MCP requests with robust AI features and a flexible plugin system.
+description: Kong is a high-performance, cloud-native API gateway ideal for managing LLM/MCP requests with robust AI features and a flexible plugin system.
 tags: []
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/Kong/kong'
+thumbnail: https://opengraph.githubassets.com/1/Kong/kong
 category: AI Infra
 ---
 

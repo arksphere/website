@@ -3,7 +3,7 @@ title: Composio
 description: SDKs and a platform that connect agents and LLMs to 500+ integrations, offering TypeScript and Python SDKs plus the MCP-based Rube server.
 date: 2025-11-28T02:18:20.440Z
 website: https://composio.dev/
-github: https://github.com/ComposioHQ/composio
+github: https://github.com/composiohq/composio
 oss_date: 2024-02-23T13:58:27.000Z
 author: ComposioHQ
 tags:

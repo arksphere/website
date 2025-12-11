@@ -1,17 +1,15 @@
 ---
 title: Seldon Core
-description: >-
-  An MLOps platform to deploy, manage and monitor machine learning models at
-  scale on Kubernetes.
-date: 2025-09-30T04:25:43.357Z
-website: 'https://docs.seldon.io/projects/seldon-core/en/latest/'
-github: 'https://github.com/SeldonIO/seldon-core'
+description: An MLOps platform to deploy, manage and monitor machine learning models at scale on Kubernetes.
+date: 2025-12-11T14:38:43.539Z
+website: https://docs.seldon.io/projects/seldon-core/en/latest/
+github: https://github.com/seldonio/seldon-core
 oss_date: 2017-12-20T14:51:54.000Z
 author: SeldonIO
 tags:
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/SeldonIO/seldon-core'
+thumbnail: https://opengraph.githubassets.com/1/SeldonIO/seldon-core
 category: Inference
 ---
 

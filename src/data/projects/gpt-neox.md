@@ -1,17 +1,15 @@
 ---
 title: GPT-NeoX
-description: >-
-  GPT-NeoX is EleutherAI's toolkit for training large-scale open-source language
-  models.
-date: 2025-10-02T12:20:29.159Z
-website: 'https://www.eleuther.ai/'
-github: 'https://github.com/EleutherAI/gpt-neox'
+description: GPT-NeoX is EleutherAI's toolkit for training large-scale open-source language models.
+date: 2025-12-11T14:40:43.174Z
+website: https://www.eleuther.ai/
+github: https://github.com/eleutherai/gpt-neox
 oss_date: 2020-12-22T14:37:54.000Z
 author: EleutherAI
 tags:
   - training
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/EleutherAI/gpt-neox'
+thumbnail: https://opengraph.githubassets.com/1/EleutherAI/gpt-neox
 category: Training
 ---
 

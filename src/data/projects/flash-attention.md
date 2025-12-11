@@ -1,17 +1,15 @@
 ---
 title: Flash Attention
-description: >-
-  Fast and memory-efficient exact attention implementation optimized for large
-  Transformer training and inference.
-date: 2025-10-06T02:07:40.645Z
+description: Fast and memory-efficient exact attention implementation optimized for large Transformer training and inference.
+date: 2025-12-11T14:41:32.390Z
 oss_date: 2022-05-19T21:22:06.000Z
-website: ''
-github: 'https://github.com/Dao-AILab/flash-attention'
+website: ""
+github: https://github.com/dao-ailab/flash-attention
 author: Dao-AI Lab
 tags:
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/Dao-AILab/flash-attention'
+thumbnail: https://opengraph.githubassets.com/1/Dao-AILab/flash-attention
 category: Inference
 ---
 

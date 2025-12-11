@@ -1,18 +1,16 @@
 ---
 title: LMFlow
-description: >-
-  An extensible, convenient, and efficient toolbox for fine-tuning and inference
-  of large foundation models.
-date: 2025-09-30T03:32:11.880Z
-website: 'https://optimalscale.github.io/LMFlow/'
-github: 'https://github.com/OptimalScale/LMFlow'
+description: An extensible, convenient, and efficient toolbox for fine-tuning and inference of large foundation models.
+date: 2025-12-11T14:39:42.655Z
+website: https://optimalscale.github.io/LMFlow/
+github: https://github.com/optimalscale/lmflow
 oss_date: 2023-03-27T13:56:29.000Z
 author: OptimalScale
 tags:
   - finetune
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/OptimalScale/LMFlow'
+thumbnail: https://opengraph.githubassets.com/1/OptimalScale/LMFlow
 category: Inference
 ---
 

@@ -1,17 +1,15 @@
 ---
 title: Giskard OSS
-description: >-
-  An open-source evaluation and testing framework to detect performance, bias,
-  and security issues in AI systems.
-date: 2025-10-02T12:00:42.570Z
-website: 'https://docs.giskard.ai/en/stable/getting_started/index.html'
-github: 'https://github.com/Giskard-AI/giskard-oss'
+description: An open-source evaluation and testing framework to detect performance, bias, and security issues in AI systems.
+date: 2025-12-11T14:41:36.618Z
+website: https://docs.giskard.ai/en/stable/getting_started/index.html
+github: https://github.com/giskard-ai/giskard-oss
 oss_date: 2022-03-06T21:45:37.000Z
 author: Giskard-AI
 tags:
   - evaluation
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/Giskard-AI/giskard-oss'
+thumbnail: https://opengraph.githubassets.com/1/Giskard-AI/giskard-oss
 category: AI Infra
 ---
 

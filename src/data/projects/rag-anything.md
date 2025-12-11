@@ -2,7 +2,7 @@
 title: RAG-Anything
 description: A multimodal document processing and Retrieval-Augmented Generation (RAG) system supporting unified parsing and intelligent retrieval of text, images, tables, formulas, and more.
 date: 2025-12-05T12:04:08.616Z
-github: https://github.com/HKUDS/RAG-Anything
+github: https://github.com/hkuds/rag-anything
 oss_date: 2025-06-06T06:47:29.000Z
 author: HKUDS
 tags:

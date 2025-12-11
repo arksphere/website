@@ -1,17 +1,15 @@
 ---
 title: Unstructured
-description: >-
-  An open-source ETL solution to convert complex documents into clean,
-  structured formats for language-model workflows.
-date: 2025-10-06T08:45:32.904Z
+description: An open-source ETL solution to convert complex documents into clean, structured formats for language-model workflows.
+date: 2025-12-11T14:38:13.206Z
 oss_date: 2022-09-26T21:53:41.000Z
-website: 'https://www.unstructured.io/'
-github: 'https://github.com/Unstructured-IO/unstructured'
+website: https://www.unstructured.io/
+github: https://github.com/unstructured-io/unstructured
 author: Unstructured
 tags:
   - rag
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/Unstructured-IO/unstructured'
+thumbnail: https://opengraph.githubassets.com/1/Unstructured-IO/unstructured
 category: RAG
 ---
 

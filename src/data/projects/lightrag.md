@@ -1,18 +1,16 @@
 ---
 title: LightRAG
 slug: lightrag
-date: 2025-09-26T10:30:00.000Z
-website: 'https://pypi.org/project/lightrag-hku/'
-github: 'https://github.com/HKUDS/LightRAG'
+date: 2025-12-11T14:40:24.479Z
+website: https://pypi.org/project/lightrag-hku/
+github: https://github.com/hkuds/lightrag
 oss_date: 2024-10-02T11:57:54.000Z
 author: HKUDS
 tags:
   - inference
-description: >-
-  LightRAG is a lightweight Retrieval-Augmented Generation toolkit that supports
-  document indexing, graph extraction, and deployable server/core modes.
+description: LightRAG is a lightweight Retrieval-Augmented Generation toolkit that supports document indexing, graph extraction, and deployable server/core modes.
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/HKUDS/LightRAG'
+thumbnail: https://opengraph.githubassets.com/1/HKUDS/LightRAG
 category: Inference
 ---
 

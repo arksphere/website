@@ -1,17 +1,15 @@
 ---
 title: FlashMLA
-description: >-
-  Efficient multi-head latent attention kernels designed to accelerate
-  large-scale Transformer training and inference with reduced memory footprint.
-date: 2025-10-06T02:08:42.174Z
-website: ''
-github: 'https://github.com/deepseek-ai/FlashMLA'
+description: Efficient multi-head latent attention kernels designed to accelerate large-scale Transformer training and inference with reduced memory footprint.
+date: 2025-12-11T14:40:48.935Z
+website: ""
+github: https://github.com/deepseek-ai/flashmla
 oss_date: 2025-02-21T06:31:27.000Z
 author: DeepSeek
 tags:
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/deepseek-ai/FlashMLA'
+thumbnail: https://opengraph.githubassets.com/1/deepseek-ai/FlashMLA
 category: Inference
 ---
 

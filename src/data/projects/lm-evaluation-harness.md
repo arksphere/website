@@ -1,9 +1,8 @@
 ---
 title: lm-evaluation-harness
-slug: lm-evaluation-harness
 date: 2025-11-28T09:38:14.629Z
 website: https://github.com/EleutherAI/lm-evaluation-harness/blob/main/docs
-github: https://github.com/EleutherAI/lm-evaluation-harness
+github: https://github.com/eleutherai/lm-evaluation-harness
 oss_date: 2020-08-28T00:09:15.000Z
 author: EleutherAI
 tags:

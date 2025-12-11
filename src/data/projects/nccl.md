@@ -1,17 +1,15 @@
 ---
 title: NCCL
-description: >-
-  High-performance collective communication primitives for GPUs, optimized for
-  PCIe, NVLink, NVSwitch and RDMA networks.
-date: 2025-10-06T02:19:41.174Z
+description: High-performance collective communication primitives for GPUs, optimized for PCIe, NVLink, NVSwitch and RDMA networks.
+date: 2025-12-11T14:39:22.006Z
 oss_date: 2015-06-01T00:00:00.000Z
-website: 'https://developer.nvidia.com/nccl'
-github: 'https://github.com/NVIDIA/nccl'
+website: https://developer.nvidia.com/nccl
+github: https://github.com/nvidia/nccl
 author: NVIDIA
 tags:
   - inference
 featured: false
-thumbnail: 'https://opengraph.githubassets.com/1/NVIDIA/nccl'
+thumbnail: https://opengraph.githubassets.com/1/NVIDIA/nccl
 category: Inference
 ---
 

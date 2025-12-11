@@ -4,7 +4,7 @@ description: A fully asynchronous reinforcement learning system for large reason
 date: 2025-12-05T12:06:03.111Z
 oss_date: 2025-02-24T07:23:43.000Z
 website: https://inclusionai.github.io/AReaL/
-github: https://github.com/inclusionAI/AReaL
+github: https://github.com/inclusionai/areal
 author: Ant Group
 tags:
   - training

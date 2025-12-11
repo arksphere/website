@@ -3,7 +3,7 @@ title: Megatron-LM
 description: Reference implementation for large-scale model training and inference with distributed optimizations.
 date: 2025-11-28T02:24:40.723Z
 website: https://developer.nvidia.com/
-github: https://github.com/NVIDIA/Megatron-LM
+github: https://github.com/nvidia/megatron-lm
 oss_date: 2019-03-21T16:15:52.000Z
 author: NVIDIA
 tags:

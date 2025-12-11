@@ -3,7 +3,7 @@ title: PaddlePaddle
 description: An open-source deep learning platform developed by Baidu, providing a comprehensive ecosystem for machine learning and deep learning research and production.
 date: 2025-11-28T02:28:09.479Z
 website: https://www.paddlepaddle.org/
-github: https://github.com/PaddlePaddle/Paddle
+github: https://github.com/paddlepaddle/paddle
 oss_date: 2016-08-15T06:59:08.000Z
 author: Baidu
 tags:
