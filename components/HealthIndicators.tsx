@@ -6,6 +6,8 @@ import {
   calculateDaysSinceLastCommit,
   generateSmartBadges,
   formatNumber,
+  clearHealthCache,
+  forceRefreshHealthData,
   type HealthData,
   type SmartBadge
 } from '../services/healthService';
@@ -21,6 +23,31 @@ export const HealthBars: React.FC<HealthIndicatorsProps> = ({ githubUrl, ossDate
   const [healthData, setHealthData] = useState<HealthData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+
+  const refresh = useCallback(async () => {
+    const repo = extractRepoFromUrl(githubUrl);
+    if (!repo) {
+      setError(true);
+      setLoading(false);
+      return;
+    }
+
+    forceRefreshHealthData(repo, lang);
+    console.log(`[HealthIndicators] Cleared cache for ${repo}, reloading data...`);
+
+    setLoading(true);
+    setError(false);
+
+    try {
+      const data = await fetchHealthData(repo, lang, true);
+      setHealthData(data);
+      setError(!data);
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
+  }, [githubUrl, lang]);
 
   useEffect(() => {
     const loadHealthData = async () => {
@@ -56,8 +83,18 @@ export const HealthBars: React.FC<HealthIndicatorsProps> = ({ githubUrl, ossDate
 
   if (error || !healthData) {
     return (
-      <div className="health-error text-sm text-gray-500 dark:text-gray-400 py-4 text-center">
-        Health data unavailable
+      <div className="py-4 text-center">
+        <div className="health-error text-sm text-gray-500 dark:text-gray-400">
+          Health data unavailable
+        </div>
+        <div className="pt-2">
+          <button
+            onClick={refresh}
+            className="text-xs text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
+          >
+            🔄 Refresh Data
+          </button>
+        </div>
       </div>
     );
   }
@@ -187,6 +224,16 @@ export const HealthBars: React.FC<HealthIndicatorsProps> = ({ githubUrl, ossDate
         <span>
           {lang === 'zh' ? '更新于' : 'Updated'} {updateText} {lang === 'zh' ? '天前' : 'days ago'}
         </span>
+      </div>
+
+      {/* Refresh button - always show */}
+      <div className="pt-2">
+        <button
+          onClick={refresh}
+          className="text-xs text-blue-600 dark:text-blue-400 hover:underline cursor-pointer"
+        >
+          🔄 Refresh Data
+        </button>
       </div>
     </div>
   );
